@@ -269,7 +269,7 @@ namespace StudentApp1
 
             Panel bottomSpacerPanel = new Panel
             {
-                Height = 20,
+                Height = 40,
                 Dock = DockStyle.Bottom,
             };
 

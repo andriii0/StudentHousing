@@ -56,6 +56,8 @@
             RegisterButton = new Button();
             LogOutLabel1 = new Label();
             tabPage3 = new TabPage();
+            LogOutLabel3 = new Label();
+            ComplaintsPanel = new Panel();
             tabPage2.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -65,6 +67,7 @@
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
+            tabPage3.SuspendLayout();
             SuspendLayout();
             // 
             // tabPage2
@@ -77,14 +80,14 @@
             tabPage2.Location = new Point(4, 39);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(789, 406);
+            tabPage2.Size = new Size(656, 406);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Announcements";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // sendAnnouncement_btn
             // 
-            sendAnnouncement_btn.Location = new Point(253, 254);
+            sendAnnouncement_btn.Location = new Point(188, 330);
             sendAnnouncement_btn.Margin = new Padding(3, 2, 3, 2);
             sendAnnouncement_btn.Name = "sendAnnouncement_btn";
             sendAnnouncement_btn.Size = new Size(295, 34);
@@ -95,19 +98,20 @@
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(253, 75);
+            textBox7.BorderStyle = BorderStyle.None;
+            textBox7.Location = new Point(75, 50);
             textBox7.Margin = new Padding(3, 2, 3, 2);
             textBox7.Multiline = true;
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(295, 147);
+            textBox7.Size = new Size(516, 203);
             textBox7.TabIndex = 10;
             // 
             // LogOutLabel2
             // 
             LogOutLabel2.AutoSize = true;
             LogOutLabel2.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
-            LogOutLabel2.ForeColor = Color.DarkOrchid;
-            LogOutLabel2.Location = new Point(683, 3);
+            LogOutLabel2.ForeColor = Color.Black;
+            LogOutLabel2.Location = new Point(553, 3);
             LogOutLabel2.Name = "LogOutLabel2";
             LogOutLabel2.Size = new Size(100, 29);
             LogOutLabel2.TabIndex = 9;
@@ -123,7 +127,7 @@
             tabControl1.Location = new Point(1, 3);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(797, 449);
+            tabControl1.Size = new Size(664, 449);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -143,7 +147,7 @@
             tabPage1.Location = new Point(4, 39);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(789, 406);
+            tabPage1.Size = new Size(656, 406);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Register";
             // 
@@ -320,7 +324,7 @@
             // RegisterButton
             // 
             RegisterButton.BackColor = Color.Snow;
-            RegisterButton.Location = new Point(299, 318);
+            RegisterButton.Location = new Point(264, 318);
             RegisterButton.Name = "RegisterButton";
             RegisterButton.Padding = new Padding(1);
             RegisterButton.Size = new Size(182, 61);
@@ -335,7 +339,7 @@
             LogOutLabel1.BackColor = Color.Transparent;
             LogOutLabel1.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
             LogOutLabel1.ForeColor = Color.GhostWhite;
-            LogOutLabel1.Location = new Point(683, 3);
+            LogOutLabel1.Location = new Point(545, 13);
             LogOutLabel1.Name = "LogOutLabel1";
             LogOutLabel1.Size = new Size(100, 29);
             LogOutLabel1.TabIndex = 8;
@@ -344,22 +348,46 @@
             // 
             // tabPage3
             // 
+            tabPage3.BackColor = Color.LightPink;
+            tabPage3.BackgroundImageLayout = ImageLayout.Stretch;
+            tabPage3.Controls.Add(LogOutLabel3);
+            tabPage3.Controls.Add(ComplaintsPanel);
             tabPage3.Location = new Point(4, 39);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(789, 406);
+            tabPage3.Size = new Size(656, 406);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Complaints";
-            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // LogOutLabel3
+            // 
+            LogOutLabel3.AutoSize = true;
+            LogOutLabel3.BackColor = Color.Transparent;
+            LogOutLabel3.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
+            LogOutLabel3.ForeColor = Color.GhostWhite;
+            LogOutLabel3.Location = new Point(531, 0);
+            LogOutLabel3.Name = "LogOutLabel3";
+            LogOutLabel3.Size = new Size(100, 29);
+            LogOutLabel3.TabIndex = 9;
+            LogOutLabel3.Text = "Log Out";
+            LogOutLabel3.Click += LogOutLabel3_Click;
+            // 
+            // ComplaintsPanel
+            // 
+            ComplaintsPanel.Location = new Point(79, 32);
+            ComplaintsPanel.Name = "ComplaintsPanel";
+            ComplaintsPanel.Size = new Size(528, 378);
+            ComplaintsPanel.TabIndex = 0;
             // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(663, 459);
             Controls.Add(tabControl1);
             Name = "AdminForm";
             Text = "AdminForm";
+            Load += AdminForm_Load;
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             tabControl1.ResumeLayout(false);
@@ -377,6 +405,8 @@
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -410,5 +440,7 @@
         private Button sendAnnouncement_btn;
         private TextBox textBox7;
         private TabPage tabPage3;
+        private Panel ComplaintsPanel;
+        private Label LogOutLabel3;
     }
 }

@@ -127,6 +127,9 @@
   <data name="rm222-mind-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rm222-mind-20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rt51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rt51.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="watercolor-texture-color-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\watercolor-texture-color-wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,6 +160,12 @@
   <data name="xoe10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xoe10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="v463-aum-69-abstractbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\v463-aum-69-abstractbackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="watercolor-texture-background-light-gray-wallpaper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\watercolor-texture-background-light-gray-wallpaper1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="48534331" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\48534331.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,7 +187,10 @@
   <data name="watercolor-texture-background-light-gray-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\watercolor-texture-background-light-gray-wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="v463-aum-69-abstractbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\v463-aum-69-abstractbackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="48534332" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48534332.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="abstract-background-blue-wallpaper-image1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abstract-background-blue-wallpaper-image1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

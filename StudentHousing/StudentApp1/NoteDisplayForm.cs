@@ -108,11 +108,6 @@ namespace StudentApp1
             notesContainer.Controls.Add(spacerPanel);
         }
 
-
-
-
-
-
         private string TruncateText(string text, int maxLength)
         {
             if (text.Length > maxLength)
@@ -130,11 +125,6 @@ namespace StudentApp1
             MessageBox.Show(message, "Note Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-
-
-
-
-
         private void DeleteNoteButton_Click(object sender, EventArgs e)
         {
             Button deleteButton = (Button)sender;
@@ -147,9 +137,6 @@ namespace StudentApp1
             notes.Remove(note);
             DisplayLatestNotes(notes); 
         }
-
-
-
 
         private void BackButton_Click(object sender, EventArgs e)
         {

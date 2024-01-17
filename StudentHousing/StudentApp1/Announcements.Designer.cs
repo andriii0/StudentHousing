@@ -72,6 +72,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = StudentHousing.Properties.Resources.watercolor_texture_background_light_gray_wallpaper;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(965, 596);
             Controls.Add(viewDeletedAnnouncementsButton);
             Controls.Add(flowLayOutPanelAnnouncements);

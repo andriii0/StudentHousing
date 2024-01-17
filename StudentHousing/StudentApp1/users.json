@@ -1,1 +1,24 @@
-{"Users":[{"Id":0,"Name":"Administrator","Username":"admin","Age":0,"Room":0,"Email":"admin","Password":"admin","UserRoom":null},{"Id":1,"Name":"Andrii","Username":"andrii0","Age":17,"Room":1,"Email":"andrii@gmail.com","Password":"123","UserRoom":null},{"Id":2,"Name":"pip","Username":"pip","Age":17,"Room":1,"Email":"pip","Password":"pip","UserRoom":null},{"Id":3,"Name":"kik","Username":"kik","Age":17,"Room":1,"Email":"kik","Password":"kik","UserRoom":null},{"Id":4,"Name":"jij","Username":"jij","Age":17,"Room":2,"Email":"jij","Password":"jij","UserRoom":null}]}
+{
+  "Users": [
+    {
+      "Id": 0,
+      "Name": "Administrator",
+      "Username": "admin",
+      "Age": 0,
+      "Room": 0,
+      "Email": "admin",
+      "Password": "admin",
+      "UserRoom": null
+    },
+    {
+      "Id": 1,
+      "Name": "Andrii",
+      "Username": "andrii0",
+      "Age": 17,
+      "Room": 1,
+      "Email": "andrii@gmail.com",
+      "Password": "123",
+      "UserRoom": null
+    }
+  ]
+}

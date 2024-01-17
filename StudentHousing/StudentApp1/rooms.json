@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [
   {
     "RoomNumber": 1,
@@ -674,4 +675,668 @@
     ],
     "Notes": []
   }
+=======
+[
+  {
+    "RoomNumber": 1,
+    "Users": [
+      {
+        "Id": 78,
+        "Name": "81",
+        "Username": "81",
+        "Age": 1,
+        "Room": 1,
+        "Email": "81",
+        "Password": "81",
+        "UserRoom": null
+      },
+      {
+        "Id": 79,
+        "Name": "82",
+        "Username": "82",
+        "Age": 1,
+        "Room": 1,
+        "Email": "82",
+        "Password": "82",
+        "UserRoom": null
+      },
+      {
+        "Id": 80,
+        "Name": "83",
+        "Username": "83",
+        "Age": 1,
+        "Room": 1,
+        "Email": "83",
+        "Password": "83",
+        "UserRoom": null
+      }
+    ],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.0405957+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0406191+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.0406233+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.0406252+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.040627+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0406289+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.040631+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.0406331+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 2,
+    "Users": [],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.0406393+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0406407+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.040642+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.0406499+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.040652+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0406537+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.0406556+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.0406575+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 3,
+    "Users": [],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.040664+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0406674+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.0406694+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.0406708+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.0406725+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0406756+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.0406775+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.0406794+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 4,
+    "Users": [],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.0406834+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0406848+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.0406862+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.0407609+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.0407793+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0407833+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.0407853+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.0407875+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 5,
+    "Users": [],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.0407967+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0408005+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.0408021+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.0408037+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.0408053+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0408072+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.0408092+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.0408114+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 6,
+    "Users": [],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.0408138+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0408152+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.0408168+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.0408184+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.04082+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0408218+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.0408238+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.0408259+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 7,
+    "Users": [],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.040828+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0408336+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.040835+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.0408367+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.0408383+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0408403+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.0408423+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.0408445+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 8,
+    "Users": [],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.0408469+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0408483+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.0408496+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.0408512+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.0408529+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0408548+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.0408568+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.040859+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 9,
+    "Users": [],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.0408615+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0408629+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.0408644+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.040866+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.0408678+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0408697+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.0408717+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.0408739+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  },
+  {
+    "RoomNumber": 10,
+    "Users": [],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Clean the bathroom",
+        "dateTime": "2024-01-24T14:25:00.0408762+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Clean the kitchen",
+        "dateTime": "2024-01-24T14:25:00.0408774+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Sweep and mop the hallway",
+        "dateTime": "2024-01-24T14:25:00.0408789+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Do laundry",
+        "dateTime": "2024-01-24T14:25:00.0408804+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Take out the garbage",
+        "dateTime": "2024-01-24T14:25:00.0408821+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Wash the dishes",
+        "dateTime": "2024-01-24T14:25:00.0408839+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Buy toilet paper",
+        "dateTime": "2024-01-24T14:25:00.040886+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 8,
+        "description": "Buy household cleaning products",
+        "dateTime": "2024-01-24T14:25:00.0408882+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
+    "Notes": []
+  }
+>>>>>>> Stashed changes
 ]

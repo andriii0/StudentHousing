@@ -30,7 +30,7 @@
         {
             tabPage2 = new TabPage();
             sendAnnouncement_btn = new Button();
-            textBox7 = new TextBox();
+            sendAnnouncementAdminTextBox = new TextBox();
             LogOutLabel2 = new Label();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
@@ -75,12 +75,12 @@
             tabPage2.BackgroundImage = StudentHousing.Properties.Resources.watercolor_texture_background_light_gray_wallpaper;
             tabPage2.BackgroundImageLayout = ImageLayout.Stretch;
             tabPage2.Controls.Add(sendAnnouncement_btn);
-            tabPage2.Controls.Add(textBox7);
+            tabPage2.Controls.Add(sendAnnouncementAdminTextBox);
             tabPage2.Controls.Add(LogOutLabel2);
-            tabPage2.Location = new Point(4, 39);
+            tabPage2.Location = new Point(4, 40);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(656, 406);
+            tabPage2.Size = new Size(656, 405);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Announcements";
             tabPage2.UseVisualStyleBackColor = true;
@@ -96,15 +96,15 @@
             sendAnnouncement_btn.UseVisualStyleBackColor = true;
             sendAnnouncement_btn.Click += sendAnnouncement_btn_Click;
             // 
-            // textBox7
+            // sendAnnouncementAdminTextBox
             // 
-            textBox7.BorderStyle = BorderStyle.None;
-            textBox7.Location = new Point(75, 50);
-            textBox7.Margin = new Padding(3, 2, 3, 2);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(516, 203);
-            textBox7.TabIndex = 10;
+            sendAnnouncementAdminTextBox.BorderStyle = BorderStyle.None;
+            sendAnnouncementAdminTextBox.Location = new Point(75, 50);
+            sendAnnouncementAdminTextBox.Margin = new Padding(3, 2, 3, 2);
+            sendAnnouncementAdminTextBox.Multiline = true;
+            sendAnnouncementAdminTextBox.Name = "sendAnnouncementAdminTextBox";
+            sendAnnouncementAdminTextBox.Size = new Size(516, 203);
+            sendAnnouncementAdminTextBox.TabIndex = 10;
             // 
             // LogOutLabel2
             // 
@@ -144,10 +144,10 @@
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(RegisterButton);
             tabPage1.Controls.Add(LogOutLabel1);
-            tabPage1.Location = new Point(4, 39);
+            tabPage1.Location = new Point(4, 40);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(656, 406);
+            tabPage1.Size = new Size(656, 405);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Register";
             // 
@@ -173,7 +173,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(3, 6);
             label7.Name = "label7";
-            label7.Size = new Size(101, 30);
+            label7.Size = new Size(102, 31);
             label7.TabIndex = 12;
             label7.Text = "Room№";
             // 
@@ -199,7 +199,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(3, 6);
             label6.Name = "label6";
-            label6.Size = new Size(115, 30);
+            label6.Size = new Size(116, 31);
             label6.TabIndex = 12;
             label6.Text = "Password";
             // 
@@ -225,7 +225,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(3, 6);
             label5.Name = "label5";
-            label5.Size = new Size(74, 30);
+            label5.Size = new Size(75, 31);
             label5.TabIndex = 12;
             label5.Text = "Email";
             // 
@@ -252,7 +252,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(3, 6);
             label4.Name = "label4";
-            label4.Size = new Size(51, 30);
+            label4.Size = new Size(52, 31);
             label4.TabIndex = 12;
             label4.Text = "Age";
             // 
@@ -278,7 +278,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(3, 6);
             label3.Name = "label3";
-            label3.Size = new Size(121, 30);
+            label3.Size = new Size(122, 31);
             label3.TabIndex = 12;
             label3.Text = "Username";
             // 
@@ -305,7 +305,7 @@
             label2.BackColor = Color.Transparent;
             label2.Location = new Point(3, 6);
             label2.Name = "label2";
-            label2.Size = new Size(74, 30);
+            label2.Size = new Size(75, 31);
             label2.TabIndex = 12;
             label2.Text = "Name";
             // 
@@ -317,7 +317,7 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(16, 12);
             label1.Name = "label1";
-            label1.Size = new Size(404, 30);
+            label1.Size = new Size(405, 31);
             label1.TabIndex = 11;
             label1.Text = "To register a new user, please, type";
             // 
@@ -352,10 +352,10 @@
             tabPage3.BackgroundImageLayout = ImageLayout.Stretch;
             tabPage3.Controls.Add(LogOutLabel3);
             tabPage3.Controls.Add(ComplaintsPanel);
-            tabPage3.Location = new Point(4, 39);
+            tabPage3.Location = new Point(4, 40);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(656, 406);
+            tabPage3.Size = new Size(656, 405);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Complaints";
             // 
@@ -438,7 +438,7 @@
         private TextBox textBox6;
         private Label label7;
         private Button sendAnnouncement_btn;
-        private TextBox textBox7;
+        private TextBox sendAnnouncementAdminTextBox;
         private TabPage tabPage3;
         private Panel ComplaintsPanel;
         private Label LogOutLabel3;

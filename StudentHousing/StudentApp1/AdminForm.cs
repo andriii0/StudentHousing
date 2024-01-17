@@ -156,14 +156,46 @@ namespace StudentApp1
         }
         private void sendAnnouncement_btn_Click(object sender, EventArgs e)
         {
-            string textToSave = textBox7.Text;
+            string senderName = CurrentUser.LoggedInUser.Username;
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string textWithTime = $"{textToSave}          Time: {currentTime}";
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), messageFilePath);
+            string textToSave = sendAnnouncementAdminTextBox.Text;
 
-            SaveTextToJsonFile(textWithTime, filePath);
+            if (!string.IsNullOrEmpty(sendAnnouncementAdminTextBox.Text))
+            {
+                MessageFormat message = new MessageFormat
+                {
+                    SenderName = senderName,
+                    CurrentTime = currentTime,
+                    TextToSave = textToSave
+                };
 
-            MessageBox.Show("Saved to JSON file!");
+                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), messageFilePath);
+
+                SaveMessageToJsonFile(message, filePath);
+
+                MessageBox.Show("Announcement has been sent successfully");
+                sendAnnouncementAdminTextBox.Clear();
+            }
+
+            else
+            {
+                MessageBox.Show("There was no input");
+            }
+        }
+        private void SaveMessageToJsonFile(MessageFormat message, string filePath)
+        {
+            try
+            {
+                string existingJson = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
+                List<MessageFormat> messages = JsonConvert.DeserializeObject<List<MessageFormat>>(existingJson) ?? new List<MessageFormat>();
+                messages.Add(message);
+                string updatedJson = JsonConvert.SerializeObject(messages, Formatting.Indented);
+                File.WriteAllText(filePath, updatedJson);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving message to JSON file: {ex.Message}");
+            }
         }
         private void SaveRoomsToJson()
         {

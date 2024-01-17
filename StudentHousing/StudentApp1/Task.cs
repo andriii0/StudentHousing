@@ -24,9 +24,11 @@
             public int taskId;
             public string description;
             public DateTime dateTime;
-            public TaskType TaskType { get; private set; } 
+            public TaskType TaskType { get; private set; }
+            public bool IsCompleted { get; set; } = false;
 
-            public Task(int taskId, string description, DateTime dateTime, TaskType tasks)
+
+        public Task(int taskId, string description, DateTime dateTime, TaskType tasks)
             {
                 this.taskId = taskId;
                 this.description = description;

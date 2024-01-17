@@ -4,12 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 namespace StudentApp1
 {
     public partial class Complaints : Form
@@ -60,7 +54,6 @@ namespace StudentApp1
             string json = JsonConvert.SerializeObject(complaints, Formatting.Indented);
             File.WriteAllText(ComplaintsJson, json);
         }
-
 
 
         private void BackButton_Click(object sender, EventArgs e)

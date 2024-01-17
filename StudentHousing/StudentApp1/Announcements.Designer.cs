@@ -37,9 +37,9 @@
             // 
             backLabel.AutoSize = true;
             backLabel.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
-            backLabel.Location = new Point(10, 7);
+            backLabel.Location = new Point(11, 9);
             backLabel.Name = "backLabel";
-            backLabel.Size = new Size(65, 29);
+            backLabel.Size = new Size(82, 38);
             backLabel.TabIndex = 0;
             backLabel.Text = "Back";
             backLabel.Click += backLabel_Click;
@@ -47,18 +47,16 @@
             // flowLayOutPanelAnnouncements
             // 
             flowLayOutPanelAnnouncements.AutoScroll = true;
-            flowLayOutPanelAnnouncements.Location = new Point(10, 38);
-            flowLayOutPanelAnnouncements.Margin = new Padding(3, 2, 3, 2);
+            flowLayOutPanelAnnouncements.Location = new Point(12, 50);
             flowLayOutPanelAnnouncements.Name = "flowLayOutPanelAnnouncements";
-            flowLayOutPanelAnnouncements.Size = new Size(679, 292);
+            flowLayOutPanelAnnouncements.Size = new Size(776, 389);
             flowLayOutPanelAnnouncements.TabIndex = 1;
             // 
             // viewDeletedAnnouncementsButton
             // 
-            viewDeletedAnnouncementsButton.Location = new Point(231, 7);
-            viewDeletedAnnouncementsButton.Margin = new Padding(3, 2, 3, 2);
+            viewDeletedAnnouncementsButton.Location = new Point(264, 9);
             viewDeletedAnnouncementsButton.Name = "viewDeletedAnnouncementsButton";
-            viewDeletedAnnouncementsButton.Size = new Size(206, 22);
+            viewDeletedAnnouncementsButton.Size = new Size(235, 29);
             viewDeletedAnnouncementsButton.TabIndex = 2;
             viewDeletedAnnouncementsButton.Text = "View deleted announcements";
             viewDeletedAnnouncementsButton.UseVisualStyleBackColor = true;
@@ -66,16 +64,14 @@
             // 
             // Announcements
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(800, 451);
             Controls.Add(viewDeletedAnnouncementsButton);
             Controls.Add(flowLayOutPanelAnnouncements);
             Controls.Add(backLabel);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Announcements";
             Text = "Announcements";
-            Load += Announcements_Load;
             ResumeLayout(false);
             PerformLayout();
         }

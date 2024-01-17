@@ -32,52 +32,19 @@ namespace StudentApp1
         }
         public void AssignTasksRandomly()
         {
-            Tasks.Clear();
 
             Array taskTypes = Enum.GetValues(typeof(TaskType));
 
             foreach (TaskType taskType in taskTypes)
             {
-                string taskDescription = GetTaskDescriptionForType(taskType);
-                Task newTask = new Task(GetNextTaskId(), taskDescription, DateTime.Now.AddDays(7), taskType);
+                Task newTask = new Task(GetNextTaskId(), $"Perform {taskType} task", DateTime.Now.AddDays(7), taskType);
                 Tasks.Add(newTask);
             }
         }
-        private string GetTaskDescriptionForType(TaskType taskType)
-        {
-            switch (taskType)
-            {
-                case TaskType.Bathroom:
-                    return "Clean the bathroom";
-                case TaskType.Kitchen:
-                    return "Clean the kitchen";
-                case TaskType.Hallway:
-                    return "Sweep and mop the hallway";
-                case TaskType.Clothes:
-                    return "Do laundry";
-                case TaskType.Garbage:
-                    return "Take out the garbage";
-                case TaskType.Dishes:
-                    return "Wash the dishes";
-                case TaskType.Paper:
-                    return "Buy toilet paper";
-                case TaskType.Other:
-                    return "Buy household cleaning products";
-                default:
-                    return "Perform a task";
-            }
-        }
-        public void AddTask(string description, DateTime dateTime, TaskType taskType)
-        {
-            int nextTaskId = GetNextTaskId();
-            Task newTask = new Task(nextTaskId, description, dateTime, taskType);
-            Tasks.Add(newTask);
-        }
 
-        public int GetNextTaskId()
+        private int GetNextTaskId()
         {
-            int maxTaskId = Tasks.Count > 0 ? Tasks.Max(task => task.GetTaskId()) : 0;
-            return maxTaskId + 1;
+            return taskIdCounter++;
         }
 
     }

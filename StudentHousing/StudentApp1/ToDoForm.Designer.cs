@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            listBoxTasks = new ListBox();
             buttonClose = new Button();
-            checkedListBoxTasks = new CheckedListBox();
             SuspendLayout();
+            // 
+            // listBoxTasks
+            // 
+            listBoxTasks.FormattingEnabled = true;
+            listBoxTasks.ItemHeight = 15;
+            listBoxTasks.Location = new Point(196, 152);
+            listBoxTasks.Name = "listBoxTasks";
+            listBoxTasks.Size = new Size(437, 94);
+            listBoxTasks.TabIndex = 0;
             // 
             // buttonClose
             // 
@@ -42,14 +51,6 @@
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
             // 
-            // checkedListBoxTasks
-            // 
-            checkedListBoxTasks.FormattingEnabled = true;
-            checkedListBoxTasks.Location = new Point(178, 132);
-            checkedListBoxTasks.Name = "checkedListBoxTasks";
-            checkedListBoxTasks.Size = new Size(474, 130);
-            checkedListBoxTasks.TabIndex = 2;
-            // 
             // ToDoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -57,15 +58,16 @@
             BackgroundImage = StudentHousing.Properties.Resources.c15;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(checkedListBoxTasks);
             Controls.Add(buttonClose);
+            Controls.Add(listBoxTasks);
             Name = "ToDoForm";
             Text = "ToDoForm";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private ListBox listBoxTasks;
         private Button buttonClose;
-        private CheckedListBox checkedListBoxTasks;
     }
 }

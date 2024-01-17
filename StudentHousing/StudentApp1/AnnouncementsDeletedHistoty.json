@@ -117,47 +117,5 @@
     "TextToSave": "1",
     "Status": "Unread",
     "ImportantOrNot": "Important"
-  },
-  {
-    "SenderName": "admin",
-    "CurrentTime": "2024-01-17 15:02:26",
-    "TextToSave": "123",
-    "Status": "Unread",
-    "ImportantOrNot": "Not Important"
-  },
-  {
-    "SenderName": "admin",
-    "CurrentTime": "2024-01-17 13:19:54",
-    "TextToSave": "hilohilohilohilohilo",
-    "Status": "Unread",
-    "ImportantOrNot": "Not Important"
-  },
-  {
-    "SenderName": "admin",
-    "CurrentTime": "2024-01-17 13:19:47",
-    "TextToSave": "hilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilov",
-    "Status": "Unread",
-    "ImportantOrNot": "Not Important"
-  },
-  {
-    "SenderName": "admin",
-    "CurrentTime": "2024-01-17 18:29:01",
-    "TextToSave": "alo",
-    "Status": "Unread",
-    "ImportantOrNot": "Not Important"
-  },
-  {
-    "SenderName": "admin",
-    "CurrentTime": "2024-01-17 18:28:57",
-    "TextToSave": "123",
-    "Status": "Read",
-    "ImportantOrNot": "Not Important"
-  },
-  {
-    "SenderName": "admin",
-    "CurrentTime": "2024-01-17 18:33:53",
-    "TextToSave": "test",
-    "Status": "Unread",
-    "ImportantOrNot": "Not Important"
   }
 ]

@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -34,64 +33,25 @@ namespace StudentApp1
 
         private void DisplayTasks(List<Task> tasks)
         {
-            checkedListBoxTasks.Items.Clear();
+            // Clear ListBox before adding new tasks
+            listBoxTasks.Items.Clear();
 
             foreach (Task task in tasks)
             {
+                // Formulate a string for display in the list
                 string taskString = $"{task.GetTaskId()}. {task.GetDescription()} - {task.GetDateTime()}";
 
-                checkedListBoxTasks.Items.Add(taskString, task.IsCompleted);
+                // Add the string to the ListBox
+                listBoxTasks.Items.Add(taskString);
             }
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < userRoom.Tasks.Count; i++)
-            {
-                userRoom.Tasks[i].IsCompleted = checkedListBoxTasks.GetItemChecked(i);
-            }
-            SaveRoom1ToJson();
+            // Go back to the MainForm when closing ToDoForm
             MainForm mainForm = new MainForm(currentUser);
             this.Close();
             mainForm.Show();
-        }
-        private void SaveRoom1ToJson()
-        {
-            string roomsFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\rooms.json");
-
-            try
-            {
-                string existingJson = File.Exists(roomsFilePath) ? File.ReadAllText(roomsFilePath) : "";
-
-                List<Room> rooms = JsonConvert.DeserializeObject<List<Room>>(existingJson) ?? new List<Room>();
-
-                Room currentRoom = rooms.FirstOrDefault(r => r.RoomNumber == userRoom.RoomNumber);
-                if (currentRoom == null)
-                {
-                    currentRoom = new Room(userRoom.RoomNumber);
-                    rooms.Add(currentRoom);
-                }
-
-                // Обновляем задачи в текущей комнате
-                currentRoom.Tasks = userRoom.Tasks;
-
-                int index = rooms.FindIndex(r => r.RoomNumber == currentRoom.RoomNumber);
-                if (index != -1)
-                {
-                    rooms[index] = currentRoom;
-                }
-                else
-                {
-                    rooms.Add(currentRoom);
-                }
-
-                string updatedJson = JsonConvert.SerializeObject(rooms, Formatting.Indented);
-                File.WriteAllText(roomsFilePath, updatedJson);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error saving room to JSON file: {ex.Message}");
-            }
         }
     }
 }

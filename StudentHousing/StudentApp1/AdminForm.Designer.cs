@@ -58,6 +58,11 @@
             tabPage3 = new TabPage();
             LogOutLabel3 = new Label();
             ComplaintsPanel = new Panel();
+            tabPage4 = new TabPage();
+            textBoxDescr = new TextBox();
+            btnAddTask = new Button();
+            numericUpDownRoom = new NumericUpDown();
+            btnUpdateTasks = new Button();
             tabPage2.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -68,6 +73,8 @@
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             tabPage3.SuspendLayout();
+            tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRoom).BeginInit();
             SuspendLayout();
             // 
             // tabPage2
@@ -77,10 +84,10 @@
             tabPage2.Controls.Add(sendAnnouncement_btn);
             tabPage2.Controls.Add(textBox7);
             tabPage2.Controls.Add(LogOutLabel2);
-            tabPage2.Location = new Point(4, 39);
+            tabPage2.Location = new Point(4, 40);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(656, 406);
+            tabPage2.Size = new Size(656, 405);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Announcements";
             tabPage2.UseVisualStyleBackColor = true;
@@ -123,6 +130,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
             tabControl1.Font = new Font("Sitka Small", 15.75F);
             tabControl1.Location = new Point(1, 3);
             tabControl1.Name = "tabControl1";
@@ -144,10 +152,10 @@
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(RegisterButton);
             tabPage1.Controls.Add(LogOutLabel1);
-            tabPage1.Location = new Point(4, 39);
+            tabPage1.Location = new Point(4, 40);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(656, 406);
+            tabPage1.Size = new Size(656, 405);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Register";
             // 
@@ -173,7 +181,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(3, 6);
             label7.Name = "label7";
-            label7.Size = new Size(101, 30);
+            label7.Size = new Size(102, 31);
             label7.TabIndex = 12;
             label7.Text = "Room№";
             // 
@@ -199,7 +207,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(3, 6);
             label6.Name = "label6";
-            label6.Size = new Size(115, 30);
+            label6.Size = new Size(116, 31);
             label6.TabIndex = 12;
             label6.Text = "Password";
             // 
@@ -225,7 +233,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(3, 6);
             label5.Name = "label5";
-            label5.Size = new Size(74, 30);
+            label5.Size = new Size(75, 31);
             label5.TabIndex = 12;
             label5.Text = "Email";
             // 
@@ -252,7 +260,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(3, 6);
             label4.Name = "label4";
-            label4.Size = new Size(51, 30);
+            label4.Size = new Size(52, 31);
             label4.TabIndex = 12;
             label4.Text = "Age";
             // 
@@ -278,7 +286,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(3, 6);
             label3.Name = "label3";
-            label3.Size = new Size(121, 30);
+            label3.Size = new Size(122, 31);
             label3.TabIndex = 12;
             label3.Text = "Username";
             // 
@@ -305,7 +313,7 @@
             label2.BackColor = Color.Transparent;
             label2.Location = new Point(3, 6);
             label2.Name = "label2";
-            label2.Size = new Size(74, 30);
+            label2.Size = new Size(75, 31);
             label2.TabIndex = 12;
             label2.Text = "Name";
             // 
@@ -317,7 +325,7 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(16, 12);
             label1.Name = "label1";
-            label1.Size = new Size(404, 30);
+            label1.Size = new Size(405, 31);
             label1.TabIndex = 11;
             label1.Text = "To register a new user, please, type";
             // 
@@ -352,10 +360,10 @@
             tabPage3.BackgroundImageLayout = ImageLayout.Stretch;
             tabPage3.Controls.Add(LogOutLabel3);
             tabPage3.Controls.Add(ComplaintsPanel);
-            tabPage3.Location = new Point(4, 39);
+            tabPage3.Location = new Point(4, 40);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(656, 406);
+            tabPage3.Size = new Size(656, 405);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Complaints";
             // 
@@ -378,6 +386,53 @@
             ComplaintsPanel.Name = "ComplaintsPanel";
             ComplaintsPanel.Size = new Size(528, 378);
             ComplaintsPanel.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(textBoxDescr);
+            tabPage4.Controls.Add(btnAddTask);
+            tabPage4.Controls.Add(numericUpDownRoom);
+            tabPage4.Controls.Add(btnUpdateTasks);
+            tabPage4.Location = new Point(4, 40);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Size = new Size(656, 405);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Household duties";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // textBoxDescr
+            // 
+            textBoxDescr.Location = new Point(65, 101);
+            textBoxDescr.Name = "textBoxDescr";
+            textBoxDescr.Size = new Size(120, 34);
+            textBoxDescr.TabIndex = 4;
+            // 
+            // btnAddTask
+            // 
+            btnAddTask.Location = new Point(65, 172);
+            btnAddTask.Name = "btnAddTask";
+            btnAddTask.Size = new Size(165, 45);
+            btnAddTask.TabIndex = 3;
+            btnAddTask.Text = "Add Task to the room";
+            btnAddTask.UseVisualStyleBackColor = true;
+            btnAddTask.Click += btnAddTask_Click;
+            // 
+            // numericUpDownRoom
+            // 
+            numericUpDownRoom.Location = new Point(65, 29);
+            numericUpDownRoom.Name = "numericUpDownRoom";
+            numericUpDownRoom.Size = new Size(120, 34);
+            numericUpDownRoom.TabIndex = 1;
+            // 
+            // btnUpdateTasks
+            // 
+            btnUpdateTasks.Location = new Point(194, 270);
+            btnUpdateTasks.Name = "btnUpdateTasks";
+            btnUpdateTasks.Size = new Size(292, 56);
+            btnUpdateTasks.TabIndex = 0;
+            btnUpdateTasks.Text = "Update Weekly Tasks";
+            btnUpdateTasks.UseVisualStyleBackColor = true;
+            btnUpdateTasks.Click += btnUpdateTasks_Click;
             // 
             // AdminForm
             // 
@@ -407,6 +462,9 @@
             panel1.PerformLayout();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRoom).EndInit();
             ResumeLayout(false);
         }
 
@@ -442,5 +500,10 @@
         private TabPage tabPage3;
         private Panel ComplaintsPanel;
         private Label LogOutLabel3;
+        private TabPage tabPage4;
+        private Button btnUpdateTasks;
+        private TextBox textBoxDescr;
+        private Button btnAddTask;
+        private NumericUpDown numericUpDownRoom;
     }
 }

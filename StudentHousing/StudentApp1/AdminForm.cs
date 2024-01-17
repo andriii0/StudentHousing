@@ -33,8 +33,11 @@ namespace StudentApp1
             InitializeComponent();
             LoadUserData();
             rooms = LoadRoomsFromJson();
-            InitializeRooms();
-
+            if (rooms.Count == 0)
+            {
+                InitializeRooms();
+                SaveRoomsToJson();
+            }
         }
         private void InitializeRooms()
         {
@@ -236,7 +239,7 @@ namespace StudentApp1
                     Font = new Font("Arial", 10, FontStyle.Regular),
                     BackColor = Color.White,
 
-            };
+                };
 
                 deleteButton.Click += DeleteComplaintButton_Click;
 
@@ -293,7 +296,7 @@ namespace StudentApp1
         private void RemoveComplaint(string complaint)
         {
             complaints.Remove(complaint);
-            SaveComplaintsToJson(); 
+            SaveComplaintsToJson();
             DisplayLatestComplaints(complaints);
         }
 
@@ -324,6 +327,38 @@ namespace StudentApp1
         {
             LoadComplaintsFromJson();
             DisplayLatestComplaints(complaints);
+        }
+
+        private void btnUpdateTasks_Click(object sender, EventArgs e)
+        {
+            foreach (Room room in rooms)
+            {
+                room.AssignTasksRandomly();
+            }
+
+            SaveRoomsToJson();
+            MessageBox.Show("Tasks assigned randomly to all rooms.");
+        }
+
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            int roomNumber = (int)numericUpDownRoom.Value;
+            Room selectedRoom = rooms.FirstOrDefault(room => room.RoomNumber == roomNumber);
+
+            if (selectedRoom != null)
+            {
+                string taskDescription = textBoxDescr.Text;
+                DateTime taskDateTime = DateTime.Now.AddDays(7);
+                TaskType taskType = TaskType.Other;
+
+                selectedRoom.AddTask(taskDescription, taskDateTime, taskType);
+                SaveRoomsToJson();
+                MessageBox.Show("Task added to the selected room.");
+            }
+            else
+            {
+                MessageBox.Show("Invalid room number. Please enter a valid room number.");
+            }
         }
     }
 }

@@ -72,7 +72,6 @@ namespace StudentApp1
                     rooms.Add(currentRoom);
                 }
 
-                // Обновляем задачи в текущей комнате
                 currentRoom.Tasks = userRoom.Tasks;
 
                 int index = rooms.FindIndex(r => r.RoomNumber == currentRoom.RoomNumber);

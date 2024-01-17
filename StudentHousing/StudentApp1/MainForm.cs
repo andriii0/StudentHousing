@@ -53,7 +53,7 @@ namespace StudentApp1
 
         private void Complaints_Click(object sender, EventArgs e)
         {
-            Complaints complaints = new Complaints();
+            Complaints complaints = new Complaints(CurrentUser.LoggedInUser, AuthenticatedUser.UserRoom);
             this.Close();
             complaints.Show();
         }

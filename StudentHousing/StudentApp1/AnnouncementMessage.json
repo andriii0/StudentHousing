@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "SenderName": "admin",
+    "CurrentTime": "2024-01-17 13:19:47",
+    "TextToSave": "hilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilohilov",
+    "Status": "Unread",
+    "ImportantOrNot": "Not Important"
+  },
+  {
+    "SenderName": "admin",
+    "CurrentTime": "2024-01-17 13:19:54",
+    "TextToSave": "hilohilohilohilohilo",
+    "Status": "Unread",
+    "ImportantOrNot": "Not Important"
+  }
+]

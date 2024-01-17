@@ -15,7 +15,8 @@
             Clothes,
             Garbage,
             Dishes,
-            Paper
+            Paper,
+            Other
         }
 
         public class Task

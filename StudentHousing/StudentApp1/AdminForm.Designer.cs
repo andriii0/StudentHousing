@@ -30,7 +30,7 @@
         {
             tabPage2 = new TabPage();
             sendAnnouncement_btn = new Button();
-            sendAnnouncementAdminTextBox = new TextBox();
+            textBox7 = new TextBox();
             LogOutLabel2 = new Label();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
@@ -58,6 +58,11 @@
             tabPage3 = new TabPage();
             LogOutLabel3 = new Label();
             ComplaintsPanel = new Panel();
+            tabPage4 = new TabPage();
+            textBoxDescr = new TextBox();
+            btnAddTask = new Button();
+            numericUpDownRoom = new NumericUpDown();
+            btnUpdateTasks = new Button();
             tabPage2.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -68,6 +73,8 @@
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             tabPage3.SuspendLayout();
+            tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRoom).BeginInit();
             SuspendLayout();
             // 
             // tabPage2
@@ -75,7 +82,7 @@
             tabPage2.BackgroundImage = StudentHousing.Properties.Resources.watercolor_texture_background_light_gray_wallpaper;
             tabPage2.BackgroundImageLayout = ImageLayout.Stretch;
             tabPage2.Controls.Add(sendAnnouncement_btn);
-            tabPage2.Controls.Add(sendAnnouncementAdminTextBox);
+            tabPage2.Controls.Add(textBox7);
             tabPage2.Controls.Add(LogOutLabel2);
             tabPage2.Location = new Point(4, 40);
             tabPage2.Name = "tabPage2";
@@ -96,15 +103,15 @@
             sendAnnouncement_btn.UseVisualStyleBackColor = true;
             sendAnnouncement_btn.Click += sendAnnouncement_btn_Click;
             // 
-            // sendAnnouncementAdminTextBox
+            // textBox7
             // 
-            sendAnnouncementAdminTextBox.BorderStyle = BorderStyle.None;
-            sendAnnouncementAdminTextBox.Location = new Point(75, 50);
-            sendAnnouncementAdminTextBox.Margin = new Padding(3, 2, 3, 2);
-            sendAnnouncementAdminTextBox.Multiline = true;
-            sendAnnouncementAdminTextBox.Name = "sendAnnouncementAdminTextBox";
-            sendAnnouncementAdminTextBox.Size = new Size(516, 203);
-            sendAnnouncementAdminTextBox.TabIndex = 10;
+            textBox7.BorderStyle = BorderStyle.None;
+            textBox7.Location = new Point(75, 50);
+            textBox7.Margin = new Padding(3, 2, 3, 2);
+            textBox7.Multiline = true;
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(516, 203);
+            textBox7.TabIndex = 10;
             // 
             // LogOutLabel2
             // 
@@ -123,6 +130,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
             tabControl1.Font = new Font("Sitka Small", 15.75F);
             tabControl1.Location = new Point(1, 3);
             tabControl1.Name = "tabControl1";
@@ -379,6 +387,53 @@
             ComplaintsPanel.Size = new Size(528, 378);
             ComplaintsPanel.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(textBoxDescr);
+            tabPage4.Controls.Add(btnAddTask);
+            tabPage4.Controls.Add(numericUpDownRoom);
+            tabPage4.Controls.Add(btnUpdateTasks);
+            tabPage4.Location = new Point(4, 40);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Size = new Size(656, 405);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Household duties";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // textBoxDescr
+            // 
+            textBoxDescr.Location = new Point(65, 101);
+            textBoxDescr.Name = "textBoxDescr";
+            textBoxDescr.Size = new Size(120, 34);
+            textBoxDescr.TabIndex = 4;
+            // 
+            // btnAddTask
+            // 
+            btnAddTask.Location = new Point(65, 172);
+            btnAddTask.Name = "btnAddTask";
+            btnAddTask.Size = new Size(165, 45);
+            btnAddTask.TabIndex = 3;
+            btnAddTask.Text = "Add Task to the room";
+            btnAddTask.UseVisualStyleBackColor = true;
+            btnAddTask.Click += btnAddTask_Click;
+            // 
+            // numericUpDownRoom
+            // 
+            numericUpDownRoom.Location = new Point(65, 29);
+            numericUpDownRoom.Name = "numericUpDownRoom";
+            numericUpDownRoom.Size = new Size(120, 34);
+            numericUpDownRoom.TabIndex = 1;
+            // 
+            // btnUpdateTasks
+            // 
+            btnUpdateTasks.Location = new Point(194, 270);
+            btnUpdateTasks.Name = "btnUpdateTasks";
+            btnUpdateTasks.Size = new Size(292, 56);
+            btnUpdateTasks.TabIndex = 0;
+            btnUpdateTasks.Text = "Update Weekly Tasks";
+            btnUpdateTasks.UseVisualStyleBackColor = true;
+            btnUpdateTasks.Click += btnUpdateTasks_Click;
+            // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -407,6 +462,9 @@
             panel1.PerformLayout();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRoom).EndInit();
             ResumeLayout(false);
         }
 
@@ -438,9 +496,14 @@
         private TextBox textBox6;
         private Label label7;
         private Button sendAnnouncement_btn;
-        private TextBox sendAnnouncementAdminTextBox;
+        private TextBox textBox7;
         private TabPage tabPage3;
         private Panel ComplaintsPanel;
         private Label LogOutLabel3;
+        private TabPage tabPage4;
+        private Button btnUpdateTasks;
+        private TextBox textBoxDescr;
+        private Button btnAddTask;
+        private NumericUpDown numericUpDownRoom;
     }
 }

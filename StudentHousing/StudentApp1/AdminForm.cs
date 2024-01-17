@@ -33,8 +33,11 @@ namespace StudentApp1
             InitializeComponent();
             LoadUserData();
             rooms = LoadRoomsFromJson();
-            InitializeRooms();
-
+            if (rooms.Count == 0)
+            {
+                InitializeRooms();
+                SaveRoomsToJson();
+            }
         }
         private void InitializeRooms()
         {
@@ -156,46 +159,14 @@ namespace StudentApp1
         }
         private void sendAnnouncement_btn_Click(object sender, EventArgs e)
         {
-            string senderName = CurrentUser.LoggedInUser.Username;
+            string textToSave = textBox7.Text;
             string currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string textToSave = sendAnnouncementAdminTextBox.Text;
+            string textWithTime = $"{textToSave}          Time: {currentTime}";
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), messageFilePath);
 
-            if (!string.IsNullOrEmpty(sendAnnouncementAdminTextBox.Text))
-            {
-                MessageFormat message = new MessageFormat
-                {
-                    SenderName = senderName,
-                    CurrentTime = currentTime,
-                    TextToSave = textToSave
-                };
+            SaveTextToJsonFile(textWithTime, filePath);
 
-                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), messageFilePath);
-
-                SaveMessageToJsonFile(message, filePath);
-
-                MessageBox.Show("Announcement has been sent successfully");
-                sendAnnouncementAdminTextBox.Clear();
-            }
-
-            else
-            {
-                MessageBox.Show("There was no input");
-            }
-        }
-        private void SaveMessageToJsonFile(MessageFormat message, string filePath)
-        {
-            try
-            {
-                string existingJson = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
-                List<MessageFormat> messages = JsonConvert.DeserializeObject<List<MessageFormat>>(existingJson) ?? new List<MessageFormat>();
-                messages.Add(message);
-                string updatedJson = JsonConvert.SerializeObject(messages, Formatting.Indented);
-                File.WriteAllText(filePath, updatedJson);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error saving message to JSON file: {ex.Message}");
-            }
+            MessageBox.Show("Saved to JSON file!");
         }
         private void SaveRoomsToJson()
         {
@@ -268,7 +239,7 @@ namespace StudentApp1
                     Font = new Font("Arial", 10, FontStyle.Regular),
                     BackColor = Color.White,
 
-            };
+                };
 
                 deleteButton.Click += DeleteComplaintButton_Click;
 
@@ -325,7 +296,7 @@ namespace StudentApp1
         private void RemoveComplaint(string complaint)
         {
             complaints.Remove(complaint);
-            SaveComplaintsToJson(); 
+            SaveComplaintsToJson();
             DisplayLatestComplaints(complaints);
         }
 
@@ -356,6 +327,38 @@ namespace StudentApp1
         {
             LoadComplaintsFromJson();
             DisplayLatestComplaints(complaints);
+        }
+
+        private void btnUpdateTasks_Click(object sender, EventArgs e)
+        {
+            foreach (Room room in rooms)
+            {
+                room.AssignTasksRandomly();
+            }
+
+            SaveRoomsToJson();
+            MessageBox.Show("Tasks assigned randomly to all rooms.");
+        }
+
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            int roomNumber = (int)numericUpDownRoom.Value;
+            Room selectedRoom = rooms.FirstOrDefault(room => room.RoomNumber == roomNumber);
+
+            if (selectedRoom != null)
+            {
+                string taskDescription = textBoxDescr.Text;
+                DateTime taskDateTime = DateTime.Now.AddDays(7);
+                TaskType taskType = TaskType.Other;
+
+                selectedRoom.AddTask(taskDescription, taskDateTime, taskType);
+                SaveRoomsToJson();
+                MessageBox.Show("Task added to the selected room.");
+            }
+            else
+            {
+                MessageBox.Show("Invalid room number. Please enter a valid room number.");
+            }
         }
     }
 }

@@ -3,13 +3,33 @@
     "RoomNumber": 1,
     "Users": [
       {
-        "Id": 35,
-        "Name": "das",
-        "Username": "das",
+        "Id": 51,
+        "Name": "1",
+        "Username": "1",
         "Age": 1,
         "Room": 1,
-        "Email": "das",
-        "Password": "das",
+        "Email": "1",
+        "Password": "1",
+        "UserRoom": null
+      },
+      {
+        "Id": 52,
+        "Name": "11",
+        "Username": "11",
+        "Age": 1,
+        "Room": 1,
+        "Email": "11",
+        "Password": "11",
+        "UserRoom": null
+      },
+      {
+        "Id": 53,
+        "Name": "2",
+        "Username": "2",
+        "Age": 1,
+        "Room": 1,
+        "Email": "2",
+        "Password": "2",
         "UserRoom": null
       }
     ],
@@ -17,49 +37,62 @@
       {
         "taskId": 1,
         "description": "Perform Bathroom task",
-        "dateTime": "2024-01-22T03:07:10.0198521+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T09:54:27.799883+01:00",
+        "TaskType": 0,
+        "IsCompleted": true
       },
       {
         "taskId": 2,
         "description": "Perform Kitchen task",
-        "dateTime": "2024-01-22T03:07:10.0199866+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T09:54:27.8021293+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 3,
         "description": "Perform Hallway task",
-        "dateTime": "2024-01-22T03:07:10.0199884+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T09:54:27.8021324+01:00",
+        "TaskType": 0,
+        "IsCompleted": true
       },
       {
         "taskId": 4,
         "description": "Perform Clothes task",
-        "dateTime": "2024-01-22T03:07:10.0199888+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T09:54:27.802133+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 5,
         "description": "Perform Garbage task",
-        "dateTime": "2024-01-22T03:07:10.0199892+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T09:54:27.8021333+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 6,
         "description": "Perform Dishes task",
-        "dateTime": "2024-01-22T03:07:10.0199899+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T09:54:27.8021345+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 7,
         "description": "Perform Paper task",
-        "dateTime": "2024-01-22T03:07:10.0199903+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T09:54:27.8021348+01:00",
+        "TaskType": 0,
+        "IsCompleted": true
       }
     ],
     "Notes": [
       {
-        "Content": "kurururur"
+        "Content": "dasdasdas"
+      },
+      {
+        "Content": "vzxccasdaws"
+      },
+      {
+        "Content": "dasdwq"
       }
     ]
   },
@@ -71,14 +104,176 @@
   },
   {
     "RoomNumber": 3,
-    "Users": [],
-    "Tasks": [],
+    "Users": [
+      {
+        "Id": 54,
+        "Name": "3",
+        "Username": "3",
+        "Age": 3,
+        "Room": 3,
+        "Email": "3",
+        "Password": "3",
+        "UserRoom": null
+      }
+    ],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Perform Bathroom task",
+        "dateTime": "2024-01-24T09:54:46.3868172+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Perform Kitchen task",
+        "dateTime": "2024-01-24T09:54:46.3868272+01:00",
+        "TaskType": 0,
+        "IsCompleted": true
+      },
+      {
+        "taskId": 3,
+        "description": "Perform Hallway task",
+        "dateTime": "2024-01-24T09:54:46.3868276+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Perform Clothes task",
+        "dateTime": "2024-01-24T09:54:46.386828+01:00",
+        "TaskType": 0,
+        "IsCompleted": true
+      },
+      {
+        "taskId": 5,
+        "description": "Perform Garbage task",
+        "dateTime": "2024-01-24T09:54:46.3868283+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Perform Dishes task",
+        "dateTime": "2024-01-24T09:54:46.3868289+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Perform Paper task",
+        "dateTime": "2024-01-24T09:54:46.3868413+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      }
+    ],
     "Notes": []
   },
   {
     "RoomNumber": 4,
-    "Users": [],
-    "Tasks": [],
+    "Users": [
+      {
+        "Id": 55,
+        "Name": "4",
+        "Username": "4",
+        "Age": 4,
+        "Room": 4,
+        "Email": "4",
+        "Password": "4",
+        "UserRoom": null
+      },
+      {
+        "Id": 56,
+        "Name": "1",
+        "Username": "das",
+        "Age": 12,
+        "Room": 4,
+        "Email": "das",
+        "Password": "das",
+        "UserRoom": null
+      },
+      {
+        "Id": 57,
+        "Name": "1",
+        "Username": "das",
+        "Age": 12,
+        "Room": 4,
+        "Email": "das",
+        "Password": "das",
+        "UserRoom": null
+      },
+      {
+        "Id": 58,
+        "Name": "1",
+        "Username": "das",
+        "Age": 12,
+        "Room": 4,
+        "Email": "das",
+        "Password": "das",
+        "UserRoom": null
+      },
+      {
+        "Id": 59,
+        "Name": "1",
+        "Username": "das",
+        "Age": 12,
+        "Room": 4,
+        "Email": "das",
+        "Password": "das",
+        "UserRoom": null
+      }
+    ],
+    "Tasks": [
+      {
+        "taskId": 1,
+        "description": "Perform Bathroom task",
+        "dateTime": "2024-01-24T09:54:51.4900779+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 2,
+        "description": "Perform Kitchen task",
+        "dateTime": "2024-01-24T09:54:51.490084+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 3,
+        "description": "Perform Hallway task",
+        "dateTime": "2024-01-24T09:54:51.4900845+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 4,
+        "description": "Perform Clothes task",
+        "dateTime": "2024-01-24T09:54:51.4900869+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 5,
+        "description": "Perform Garbage task",
+        "dateTime": "2024-01-24T09:54:51.4900873+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 6,
+        "description": "Perform Dishes task",
+        "dateTime": "2024-01-24T09:54:51.4900882+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
+      },
+      {
+        "taskId": 7,
+        "description": "Perform Paper task",
+        "dateTime": "2024-01-24T09:54:51.4900894+01:00",
+        "TaskType": 0,
+        "IsCompleted": true
+      }
+    ],
     "Notes": []
   },
   {
@@ -89,98 +284,21 @@
   },
   {
     "RoomNumber": 6,
-    "Users": [
-      {
-        "Id": 33,
-        "Name": "bimba",
-        "Username": "bimba",
-        "Age": 6,
-        "Room": 6,
-        "Email": "bimba",
-        "Password": "bimba",
-        "UserRoom": null
-      },
-      {
-        "Id": 34,
-        "Name": "lesya",
-        "Username": "lesya",
-        "Age": 6,
-        "Room": 6,
-        "Email": "lesya",
-        "Password": "lesya",
-        "UserRoom": null
-      }
-    ],
-    "Tasks": [
-      {
-        "taskId": 1,
-        "description": "Perform Bathroom task",
-        "dateTime": "2024-01-22T03:01:44.351335+01:00",
-        "TaskType": 0
-      },
-      {
-        "taskId": 2,
-        "description": "Perform Kitchen task",
-        "dateTime": "2024-01-22T03:01:44.3535848+01:00",
-        "TaskType": 0
-      },
-      {
-        "taskId": 3,
-        "description": "Perform Hallway task",
-        "dateTime": "2024-01-22T03:01:44.3535883+01:00",
-        "TaskType": 0
-      },
-      {
-        "taskId": 4,
-        "description": "Perform Clothes task",
-        "dateTime": "2024-01-22T03:01:44.3535889+01:00",
-        "TaskType": 0
-      },
-      {
-        "taskId": 5,
-        "description": "Perform Garbage task",
-        "dateTime": "2024-01-22T03:01:44.3535893+01:00",
-        "TaskType": 0
-      },
-      {
-        "taskId": 6,
-        "description": "Perform Dishes task",
-        "dateTime": "2024-01-22T03:01:44.3535902+01:00",
-        "TaskType": 0
-      },
-      {
-        "taskId": 7,
-        "description": "Perform Paper task",
-        "dateTime": "2024-01-22T03:01:44.3535906+01:00",
-        "TaskType": 0
-      }
-    ],
-    "Notes": [
-      {
-        "Content": "dasasd"
-      },
-      {
-        "Content": "zcxcz"
-      }
-    ]
-  },
-  {
-    "RoomNumber": 7,
     "Users": [],
     "Tasks": [],
     "Notes": []
   },
   {
-    "RoomNumber": 8,
+    "RoomNumber": 7,
     "Users": [
       {
-        "Id": 36,
-        "Name": "pip",
-        "Username": "pip",
-        "Age": 16,
-        "Room": 8,
-        "Email": "pip",
-        "Password": "pip",
+        "Id": 60,
+        "Name": "1",
+        "Username": "1",
+        "Age": 1,
+        "Room": 7,
+        "Email": "1",
+        "Password": "1",
         "UserRoom": null
       }
     ],
@@ -188,57 +306,60 @@
       {
         "taskId": 1,
         "description": "Perform Bathroom task",
-        "dateTime": "2024-01-22T23:03:38.1649458+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T10:06:22.149061+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 2,
         "description": "Perform Kitchen task",
-        "dateTime": "2024-01-22T23:03:38.1651452+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T10:06:22.1491558+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 3,
         "description": "Perform Hallway task",
-        "dateTime": "2024-01-22T23:03:38.1651478+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T10:06:22.1491567+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 4,
         "description": "Perform Clothes task",
-        "dateTime": "2024-01-22T23:03:38.1651483+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T10:06:22.1491571+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 5,
         "description": "Perform Garbage task",
-        "dateTime": "2024-01-22T23:03:38.1651486+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T10:06:22.1491575+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 6,
         "description": "Perform Dishes task",
-        "dateTime": "2024-01-22T23:03:38.1651492+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T10:06:22.1491584+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       },
       {
         "taskId": 7,
         "description": "Perform Paper task",
-        "dateTime": "2024-01-22T23:03:38.1651508+01:00",
-        "TaskType": 0
+        "dateTime": "2024-01-24T10:06:22.1491588+01:00",
+        "TaskType": 0,
+        "IsCompleted": false
       }
     ],
-    "Notes": [
-      {
-        "Content": "private void DisplayLatestNotes(List<Note> notes)\n{\n    Panel notesContainer = new Panel\n    {\n        Dock = DockStyle.Fill,\n        AutoScroll = true,\n    };\n\n    NotesPanel.Controls.Clear();\n    NotesPanel.Controls.Add(notesContainer);\n\n    int startIndex = Math.Max(0, notes.Count - 4);\n\n    for (int i = startIndex, noteNumber = 1; i < notes.Count; i++, noteNumber++)\n    {\n        Note note = notes[i];\n        User currentUser = CurrentUser.LoggedInUser;\n\n        Panel notePanel = new Panel\n        {\n            Dock = DockStyle.Top,\n            AutoSize = true,\n            Margin = new Padding(0, 0, 0, 10),\n        };\n\n        Label label = new Label\n        {\n            Text = $\"{noteNumber}. {TruncateText(note.Content, 300)}\",\n            AutoSize = true,\n            MaximumSize = new Size(400, 0),\n            Font = new Font(\"Arial\", 12, FontStyle.Regular),\n        };\n\n        Button deleteButton = new Button\n        {\n            Text = \"Delete\",\n            Tag = note,\n            Font = new Font(\"Arial\", 10, FontStyle.Regular),\n        };\n\n        deleteButton.Click += DeleteNoteButton_Click;\n\n        label.Location = new Point(0, 0);\n        notePanel.Controls.Add(label);\n\n        if (label.Right > 400)\n        {\n            label.MaximumSize = new Size(400 - deleteButton.Width - 10, 0);\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(deleteButton);\n        }\n        else\n        {\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(label);\n            notePanel.Controls.Add(deleteButton);\n        }\n\n        label.Click += (sender, e) => ShowNoteDetails(note);\n\n        notesContainer.Controls.Add(notePanel);\n    }\n\n    // Добавим немного пустого места в конце\n    Panel spacerPanel = new Panel\n    {\n        Height = 20,\n        Dock = DockStyle.Top,\n    };\n\n    notesContainer.Controls.Add(spacerPanel);\n}"
-      },
-      {
-        "Content": "private void DisplayLatestNotes(List<Note> notes)\n{\n    Panel notesContainer = new Panel\n    {\n        Dock = DockStyle.Fill,\n        AutoScroll = true,\n    };\n\n    NotesPanel.Controls.Clear();\n    NotesPanel.Controls.Add(notesContainer);\n\n    int startIndex = Math.Max(0, notes.Count - 4);\n\n    for (int i = startIndex, noteNumber = 1; i < notes.Count; i++, noteNumber++)\n    {\n        Note note = notes[i];\n        User currentUser = CurrentUser.LoggedInUser;\n\n        Panel notePanel = new Panel\n        {\n            Dock = DockStyle.Top,\n            AutoSize = true,\n            Margin = new Padding(0, 0, 0, 10),\n        };\n\n        Label label = new Label\n        {\n            Text = $\"{noteNumber}. {TruncateText(note.Content, 300)}\",\n            AutoSize = true,\n            MaximumSize = new Size(400, 0),\n            Font = new Font(\"Arial\", 12, FontStyle.Regular),\n        };\n\n        Button deleteButton = new Button\n        {\n            Text = \"Delete\",\n            Tag = note,\n            Font = new Font(\"Arial\", 10, FontStyle.Regular),\n        };\n\n        deleteButton.Click += DeleteNoteButton_Click;\n\n        label.Location = new Point(0, 0);\n        notePanel.Controls.Add(label);\n\n        if (label.Right > 400)\n        {\n            label.MaximumSize = new Size(400 - deleteButton.Width - 10, 0);\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(deleteButton);\n        }\n        else\n        {\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(label);\n            notePanel.Controls.Add(deleteButton);\n        }\n\n        label.Click += (sender, e) => ShowNoteDetails(note);\n\n        notesContainer.Controls.Add(notePanel);\n    }\n\n    // Добавим немного пустого места в конце\n    Panel spacerPanel = new Panel\n    {\n        Height = 20,\n        Dock = DockStyle.Top,\n    };\n\n    notesContainer.Controls.Add(spacerPanel);\n}"
-      },
-      {
-        "Content": "private void DisplayLatestNotes(List<Note> notes)\n{\n    Panel notesContainer = new Panel\n    {\n        Dock = DockStyle.Fill,\n        AutoScroll = true,\n    };\n\n    NotesPanel.Controls.Clear();\n    NotesPanel.Controls.Add(notesContainer);\n\n    int startIndex = Math.Max(0, notes.Count - 4);\n\n    for (int i = startIndex, noteNumber = 1; i < notes.Count; i++, noteNumber++)\n    {\n        Note note = notes[i];\n        User currentUser = CurrentUser.LoggedInUser;\n\n        Panel notePanel = new Panel\n        {\n            Dock = DockStyle.Top,\n            AutoSize = true,\n            Margin = new Padding(0, 0, 0, 10),\n        };\n\n        Label label = new Label\n        {\n            Text = $\"{noteNumber}. {TruncateText(note.Content, 300)}\",\n            AutoSize = true,\n            MaximumSize = new Size(400, 0),\n            Font = new Font(\"Arial\", 12, FontStyle.Regular),\n        };\n\n        Button deleteButton = new Button\n        {\n            Text = \"Delete\",\n            Tag = note,\n            Font = new Font(\"Arial\", 10, FontStyle.Regular),\n        };\n\n        deleteButton.Click += DeleteNoteButton_Click;\n\n        label.Location = new Point(0, 0);\n        notePanel.Controls.Add(label);\n\n        if (label.Right > 400)\n        {\n            label.MaximumSize = new Size(400 - deleteButton.Width - 10, 0);\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(deleteButton);\n        }\n        else\n        {\n            deleteButton.Location = new Point(label.Right + 10, 0);\n            notePanel.Controls.Add(label);\n            notePanel.Controls.Add(deleteButton);\n        }\n\n        label.Click += (sender, e) => ShowNoteDetails(note);\n\n        notesContainer.Controls.Add(notePanel);\n    }\n\n    // Добавим немного пустого места в конце\n    Panel spacerPanel = new Panel\n    {\n        Height = 20,\n        Dock = DockStyle.Top,\n    };\n\n    notesContainer.Controls.Add(spacerPanel);\n}"
-      }
-    ]
+    "Notes": []
+  },
+  {
+    "RoomNumber": 8,
+    "Users": [],
+    "Tasks": [],
+    "Notes": []
   },
   {
     "RoomNumber": 9,

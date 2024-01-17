@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using StudentHousing;
 using System;
 using System.IO;
@@ -135,8 +135,12 @@ namespace StudentApp1
         private void viewDeletedAnnouncementsButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AnnouncementsDeletedHistory announcementsDeletedHistory = new AnnouncementsDeletedHistory();     
+            AnnouncementsDeletedHistory announcementsDeletedHistory = new AnnouncementsDeletedHistory();
             announcementsDeletedHistory.Show();
+        }
+
+        private void Announcements_Load(object sender, EventArgs e)
+        {
         }
     }
 }

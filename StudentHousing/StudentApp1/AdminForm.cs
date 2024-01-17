@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using StudentHousing;
+using Button = System.Windows.Forms.Button;
 
 
 
@@ -21,8 +22,10 @@ namespace StudentApp1
         private string roomsFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\rooms.json");
         private string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\users.json");
         private string messageFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\AnnouncementMessage.json");
+        public string ComplaintsJson = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\complaints.json");
         private UserDatabase userDatabase;
         private List<Room> rooms = new List<Room>();
+        private List<string> complaints = new List<string>();
 
 
         public AdminForm()
@@ -30,8 +33,11 @@ namespace StudentApp1
             InitializeComponent();
             LoadUserData();
             rooms = LoadRoomsFromJson();
-            InitializeRooms();
-
+            if (rooms.Count == 0)
+            {
+                InitializeRooms();
+                SaveRoomsToJson();
+            }
         }
         private void InitializeRooms()
         {
@@ -52,16 +58,32 @@ namespace StudentApp1
                     return;
                 }
             }
-                userDatabase = new UserDatabase { Users = new List<User>() };
-            }
-        
+            userDatabase = new UserDatabase { Users = new List<User>() };
+        }
+
 
         private void SaveUserData()
         {
             string json = JsonConvert.SerializeObject(userDatabase);
-            File.WriteAllText(jsonFilePath, json);  
+            File.WriteAllText(jsonFilePath, json);
 
             SaveRoomsToJson();
+        }
+
+        private void SaveTextToJsonFile(string text, string filePath)
+        {
+            try
+            {
+                string existingJson = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
+                List<string> messages = JsonConvert.DeserializeObject<List<string>>(existingJson) ?? new List<string>();
+                messages.Add(text);
+                string updatedJson = JsonConvert.SerializeObject(messages, Formatting.Indented);
+                File.WriteAllText(filePath, updatedJson);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving text to JSON file: {ex.Message}");
+            }
         }
 
         private void LogOut()
@@ -81,6 +103,16 @@ namespace StudentApp1
             LogOut();
         }
 
+        private void LogOutLabel3_Click(object sender, EventArgs e)
+        {
+            LogOut();
+        }
+
+        private void LogOutLabel4_Click(object sender, EventArgs e)
+        {
+            LogOut();
+        }
+
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -88,8 +120,6 @@ namespace StudentApp1
                 e.Handled = true;
             }
         }
-
-
 
         public class UserDatabase
         {
@@ -108,16 +138,39 @@ namespace StudentApp1
                 MessageBox.Show("All fields are required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            string newUsername = textBox2.Text;
+            string newEmail = textBox4.Text;
+
+            if (IsUsernameTaken(newUsername))
+            {
+                MessageBox.Show("Username already exists. Please choose a different one.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (IsEmailTaken(newEmail))
+            {
+                MessageBox.Show("Email already exists. Please use a different one.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(textBox6.Text, out int enteredRoomNumber) || enteredRoomNumber < 1 || enteredRoomNumber > 10)
+            {
+                MessageBox.Show("Invalid room number. Please enter a number between 1 and 10.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             User newUser = new User
             {
                 Id = userDatabase.Users.Count,
                 Name = textBox1.Text,
-                Username = textBox2.Text,
+                Username = newUsername,
                 Age = int.Parse(textBox3.Text),
-                Email = textBox4.Text,
+                Email = newEmail,
                 Password = textBox5.Text,
                 Room = int.Parse(textBox6.Text)
             };
+
             int roomNumber = int.Parse(textBox6.Text);
             if (rooms[roomNumber - 1].GetUsersInRoom().Count == 0)
             {
@@ -125,28 +178,20 @@ namespace StudentApp1
             }
             rooms[roomNumber - 1].Register(newUser);
 
-
             userDatabase.Users.Add(newUser);
             SaveUserData();
 
             MessageBox.Show("User has been added!");
-
         }
 
-        private void SaveMessageToJsonFile(MessageFormat message, string filePath)
+        private bool IsUsernameTaken(string username)
         {
-            try
-            {
-                string existingJson = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
-                List<MessageFormat> messages = JsonConvert.DeserializeObject<List<MessageFormat>>(existingJson) ?? new List<MessageFormat>();
-                messages.Add(message);
-                string updatedJson = JsonConvert.SerializeObject(messages, Formatting.Indented);
-                File.WriteAllText(filePath, updatedJson);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error saving message to JSON file: {ex.Message}");
-            }
+            return userDatabase.Users.Any(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
+        }
+
+        private bool IsEmailTaken(string email)
+        {
+            return userDatabase.Users.Any(u => u.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
         }
         private void sendAnnouncement_btn_Click(object sender, EventArgs e)
         {
@@ -176,6 +221,21 @@ namespace StudentApp1
                 MessageBox.Show("There was no input");
             }
         }
+        private void SaveMessageToJsonFile(MessageFormat message, string filePath)
+        {
+            try
+            {
+                string existingJson = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
+                List<MessageFormat> messages = JsonConvert.DeserializeObject<List<MessageFormat>>(existingJson) ?? new List<MessageFormat>();
+                messages.Add(message);
+                string updatedJson = JsonConvert.SerializeObject(messages, Formatting.Indented);
+                File.WriteAllText(filePath, updatedJson);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving message to JSON file: {ex.Message}");
+            }
+        }
         private void SaveRoomsToJson()
         {
             string json = JsonConvert.SerializeObject(rooms);
@@ -202,11 +262,172 @@ namespace StudentApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There was a Error");
+                MessageBox.Show("Something went wrong with reading json file:  " + ex.Message);
             }
 
             return new List<Room>();
         }
+        private void LoadComplaintsFromJson()
+        {
+            if (File.Exists(ComplaintsJson))
+            {
+                string json = File.ReadAllText(ComplaintsJson);
+                complaints = JsonConvert.DeserializeObject<List<string>>(json) ?? new List<string>();
+            }
+        }
 
+        private void DisplayLatestComplaints(List<string> complaints)
+        {
+            Panel complaintsContainer = new Panel
+            {
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+            };
+
+            ComplaintsPanel.Controls.Clear();
+            ComplaintsPanel.Controls.Add(complaintsContainer);
+
+            int startIndex = Math.Max(0, complaints.Count - 4);
+
+            for (int i = 0; i < complaints.Count; i++)
+            {
+                string complaint = complaints[i];
+
+                Panel complaintPanel = new Panel
+                {
+                    Dock = DockStyle.Top,
+                    AutoSize = true,
+                    Margin = new Padding(0, 0, 0, 10),
+                };
+
+                Button deleteButton = new Button
+                {
+                    Text = "Delete",
+                    Tag = complaint,
+                    Font = new Font("Arial", 10, FontStyle.Regular),
+                    BackColor = Color.White,
+
+                };
+
+                deleteButton.Click += DeleteComplaintButton_Click;
+
+                Label label = new Label
+                {
+                    Text = $"{i + 1}. {TruncateText(complaint, 200)}",
+                    AutoSize = true,
+                    MaximumSize = new Size(400 - deleteButton.Width - 10, 0),
+                    Font = new Font("Arial", 12, FontStyle.Regular),
+                    ForeColor = Color.White,
+                };
+
+                label.Location = new Point(0, 0);
+
+                label.Click += (sender, e) => ShowComplaintDetails(complaint);
+
+                complaintPanel.Controls.Add(label);
+
+                deleteButton.Location = new Point(Math.Min(label.Right + 10, 400 - deleteButton.Width), 0);
+                complaintPanel.Controls.Add(deleteButton);
+
+                complaintsContainer.Controls.Add(complaintPanel);
+            }
+
+            Panel spacerPanel = new Panel
+            {
+                Height = 20,
+                Dock = DockStyle.Top,
+            };
+
+            Panel bottomSpacerPanel = new Panel
+            {
+                Height = 40,
+                Dock = DockStyle.Bottom,
+            };
+
+            complaintsContainer.Controls.Add(spacerPanel);
+        }
+
+        private void ShowComplaintDetails(string complaint)
+        {
+            string message = $"Complaint: {complaint}";
+            MessageBox.Show(message, "Complaint Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
+        private void DeleteComplaintButton_Click(object sender, EventArgs e)
+        {
+            Button deleteButton = (Button)sender;
+            string complaintToDelete = (string)deleteButton.Tag;
+            RemoveComplaint(complaintToDelete);
+        }
+
+        private void RemoveComplaint(string complaint)
+        {
+            complaints.Remove(complaint);
+            SaveComplaintsToJson();
+            DisplayLatestComplaints(complaints);
+        }
+
+        private void SaveComplaintsToJson()
+        {
+            try
+            {
+                string json = JsonConvert.SerializeObject(complaints);
+                File.WriteAllText(ComplaintsJson, json);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving complaints to JSON file: {ex.Message}");
+            }
+        }
+
+
+        private string TruncateText(string text, int maxLength)
+        {
+            if (text.Length > maxLength)
+            {
+                return text.Substring(0, maxLength) + "...";
+            }
+            return text;
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+            LoadComplaintsFromJson();
+            DisplayLatestComplaints(complaints);
+        }
+
+        private void btnUpdateTasks_Click(object sender, EventArgs e)
+        {
+            foreach (Room room in rooms)
+            {
+                room.AssignTasksRandomly();
+            }
+
+            SaveRoomsToJson();
+            MessageBox.Show("Tasks assigned randomly to all rooms.");
+        }
+
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            int roomNumber = (int)numericUpDownRoom.Value;
+            Room selectedRoom = rooms.FirstOrDefault(room => room.RoomNumber == roomNumber);
+
+            if (selectedRoom != null)
+            {
+                string taskDescription = textBoxDescr.Text;
+                DateTime taskDateTime = DateTime.Now.AddDays(7);
+                TaskType taskType = TaskType.Other;
+
+                selectedRoom.AddTask(taskDescription, taskDateTime, taskType);
+                SaveRoomsToJson();
+                MessageBox.Show("Task added to the selected room.");
+            }
+            else
+            {
+                MessageBox.Show("Invalid room number. Please enter a valid room number.");
+            }
+        }
     }
 }
+

@@ -108,11 +108,6 @@ namespace StudentApp1
             notesContainer.Controls.Add(spacerPanel);
         }
 
-
-
-
-
-
         private string TruncateText(string text, int maxLength)
         {
             if (text.Length > maxLength)
@@ -124,16 +119,11 @@ namespace StudentApp1
 
         private void ShowNoteDetails(Note note)
         {
-            string creatorName = (note.Creator != null) ? note.Creator.Name : "Unknown";
+            string creatorName = (note.Creator != null) ? note.Creator.Name : CurrentUser.LoggedInUser.Name;
 
             string message = $"Description: {note.Content}\nCreated by: {creatorName}";
             MessageBox.Show(message, "Note Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
-
-
-
 
         private void DeleteNoteButton_Click(object sender, EventArgs e)
         {
@@ -145,11 +135,9 @@ namespace StudentApp1
         private void RemoveNote(Note note)
         {
             notes.Remove(note);
-            DisplayLatestNotes(notes); 
+            DisplayLatestNotes(notes);
+            UpdateJsonFile();
         }
-
-
-
 
         private void BackButton_Click(object sender, EventArgs e)
         {
@@ -158,6 +146,29 @@ namespace StudentApp1
             form1.Show();
         }
 
+        private void UpdateJsonFile()
+        {
+            string roomsFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\rooms.json");
+
+            try
+            {
+                string existingJson = File.Exists(roomsFilePath) ? File.ReadAllText(roomsFilePath) : "";
+
+                List<Room> rooms = JsonConvert.DeserializeObject<List<Room>>(existingJson) ?? new List<Room>();
+
+                Room currentRoom = rooms.FirstOrDefault(r => r.RoomNumber == userRoom.RoomNumber);
+                if (currentRoom != null)
+                {
+                    currentRoom.Notes = userRoom.Notes;
+                    string updatedJson = JsonConvert.SerializeObject(rooms, Formatting.Indented);
+                    File.WriteAllText(roomsFilePath, updatedJson);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating JSON file: {ex.Message}");
+            }
+        }
         private void AddNotes_Click(object sender, EventArgs e)
         {
             AddNoteForm addNotesForm = new AddNoteForm(userRoom, currentUser);

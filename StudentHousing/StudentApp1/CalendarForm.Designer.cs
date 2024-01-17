@@ -34,12 +34,10 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Anchor = AnchorStyles.None;
             monthCalendar1.BackColor = Color.LightCoral;
             monthCalendar1.CalendarDimensions = new Size(2, 2);
-            monthCalendar1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            monthCalendar1.Location = new Point(4, 10);
-            monthCalendar1.Margin = new Padding(13, 15, 13, 15);
+            monthCalendar1.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            monthCalendar1.Location = new Point(-1, 1);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
             monthCalendar1.TitleBackColor = Color.MediumPurple;
@@ -48,11 +46,9 @@
             // 
             // btnOK
             // 
-            btnOK.Anchor = AnchorStyles.Bottom;
-            btnOK.Location = new Point(121, 537);
-            btnOK.Margin = new Padding(4, 5, 4, 5);
+            btnOK.Location = new Point(85, 322);
             btnOK.Name = "btnOK";
-            btnOK.Size = new Size(206, 80);
+            btnOK.Size = new Size(144, 48);
             btnOK.TabIndex = 1;
             btnOK.Text = "Choose date";
             btnOK.UseVisualStyleBackColor = true;
@@ -60,17 +56,13 @@
             // 
             // CalendarForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.RosyBrown;
-            ClientSize = new Size(470, 652);
+            ClientSize = new Size(329, 391);
             Controls.Add(btnOK);
             Controls.Add(monthCalendar1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "CalendarForm";
-            SizeGripStyle = SizeGripStyle.Show;
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "CalendarForm";
             ResumeLayout(false);
         }

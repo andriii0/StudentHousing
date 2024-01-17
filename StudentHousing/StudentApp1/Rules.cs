@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudentHousing;
+
 
 namespace StudentApp1
 {
@@ -24,8 +26,8 @@ namespace StudentApp1
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-            MainForm form1 = new MainForm(authenticatedUser);
+            this.Hide();
+            MainForm form1 = new MainForm(CurrentUser.LoggedInUser);
             form1.Show();
         }
 

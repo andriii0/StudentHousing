@@ -13,6 +13,7 @@ namespace StudentApp1
         public ToDoForm(User user, Room room)
         {
             InitializeComponent();
+            this.FormClosing += (sender, e) => Application.Exit();
             currentUser = user;
             userRoom = room;
             LoadTasksForCurrentUserRoom();
@@ -56,7 +57,7 @@ namespace StudentApp1
             }
             SaveRoom1ToJson();
             MainForm mainForm = new MainForm(currentUser);
-            this.Close();
+            this.Hide();
             mainForm.Show();
         }
         private void SaveRoom1ToJson()

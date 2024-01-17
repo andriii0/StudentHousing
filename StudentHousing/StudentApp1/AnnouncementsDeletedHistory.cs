@@ -13,6 +13,8 @@ namespace StudentHousing
         public AnnouncementsDeletedHistory()
         {
             InitializeComponent();
+            this.FormClosing += (sender, e) => Application.Exit();
+
             LoadDeletedHistory();
 
             goBackToAnnouncementsLabel.MouseEnter += goBackToAnnouncementsLabel_MouseEnter;
@@ -52,7 +54,7 @@ namespace StudentHousing
 
         private void goBackToAnnouncementsLabel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Announcements announcements = new Announcements();
             announcements.Show();
         }

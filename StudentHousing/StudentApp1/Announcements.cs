@@ -17,6 +17,7 @@ namespace StudentApp1
         {
             InitializeComponent();
             announcementsButtons = new AnnouncementsButtons(flowLayOutPanelAnnouncements);
+            this.FormClosing += (sender, e) => Application.Exit();
             LoadAnnouncements();
 
             backLabel.MouseEnter += backLabel_MouseEnter;
@@ -51,7 +52,7 @@ namespace StudentApp1
             Panel panel = new Panel();
             panel.Dock = DockStyle.Top;
             panel.Height = 170;
-            panel.Width = 750;
+            panel.Width = 910;
 
             Label statusLabel = new Label();
             statusLabel.Text = announcement.Status;
@@ -71,7 +72,7 @@ namespace StudentApp1
             richTextBox.Text = $"{announcement.SenderName}     {announcement.CurrentTime}\n{announcement.TextToSave}";
             richTextBox.ReadOnly = true;
             richTextBox.Height = 120;
-            richTextBox.Width = 740;
+            richTextBox.Width = 900;
 
             FlowLayoutPanel buttonFlowLayoutPanel = new FlowLayoutPanel();
             buttonFlowLayoutPanel.Dock = DockStyle.Bottom;
@@ -80,35 +81,35 @@ namespace StudentApp1
 
             Button changeStatusToReadButton = new Button();
             changeStatusToReadButton.Text = "Mark as read";
-            changeStatusToReadButton.Width = 130;
+            changeStatusToReadButton.Width = 175;
             changeStatusToReadButton.Height = 40;
             changeStatusToReadButton.Tag = richTextBox;
             changeStatusToReadButton.Click += announcementsButtons.ChangeStatusToReadButton_Click;
 
             Button changeStatusToUnreadButton = new Button();
             changeStatusToUnreadButton.Text = "Mark as Unread";
-            changeStatusToUnreadButton.Width = 130;
+            changeStatusToUnreadButton.Width = 175;
             changeStatusToUnreadButton.Height = 40;
             changeStatusToUnreadButton.Tag = richTextBox;
             changeStatusToUnreadButton.Click += announcementsButtons.ChangeStatusToUnreadButton_Click;
 
             Button deleteButton = new Button();
             deleteButton.Text = "Delete";
-            deleteButton.Width = 130;
+            deleteButton.Width = 175;
             deleteButton.Height = 40;
             deleteButton.Tag = richTextBox;
             deleteButton.Click += announcementsButtons.DeleteButton_Click;
 
             Button markImportantButton = new Button();
             markImportantButton.Text = "Mark as important";
-            markImportantButton.Width = 160;
+            markImportantButton.Width = 175;
             markImportantButton.Height = 40;
             markImportantButton.Tag = richTextBox;
             markImportantButton.Click += announcementsButtons.MarkImportantButton_Click;
 
             Button markNotImportantButton = new Button();
             markNotImportantButton.Text = "Mark as unimportant";
-            markNotImportantButton.Width = 160;
+            markNotImportantButton.Width = 175;
             markNotImportantButton.Height = 40;
             markNotImportantButton.Tag = richTextBox;
             markNotImportantButton.Click += announcementsButtons.MarkNotImportantButton_Click;
@@ -133,7 +134,7 @@ namespace StudentApp1
         private void backLabel_Click(object sender, EventArgs e)
         {
             MainForm form1 = new MainForm(CurrentUser.LoggedInUser);
-            this.Close();
+            this.Hide();
             form1.Show();
         }
 

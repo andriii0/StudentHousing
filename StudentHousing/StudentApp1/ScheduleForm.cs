@@ -24,6 +24,8 @@ namespace StudentHousing
         public ScheduleForm(User authenticatedUser)
         {
             InitializeComponent();
+            this.FormClosing += (sender, e) => Application.Exit();
+
             eventPanels = new List<FlowLayoutPanel>();
 
             BackBtn.MouseEnter += BackBtn_MouseEnter;
@@ -164,7 +166,7 @@ namespace StudentHousing
         private void BackBtn_Click(object sender, EventArgs e)
         {
             MainForm mainform = new MainForm(CurrentUser.LoggedInUser);
-            this.Close();
+            this.Hide();
             mainform.Show();
         }
 

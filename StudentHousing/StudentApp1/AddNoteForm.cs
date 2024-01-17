@@ -64,7 +64,7 @@ namespace StudentApp1
                 SaveRoomToJson();
 
                 MessageBox.Show("Note added successfully!");
-                this.Close();
+                this.Hide();
             }
             else
             {
@@ -75,7 +75,7 @@ namespace StudentApp1
         private void BackButton_Click(object sender, EventArgs e)
         {
             MainForm form1 = new MainForm(CurrentUser.LoggedInUser);
-            this.Close();
+            this.Hide();
             form1.Show();
         }
 

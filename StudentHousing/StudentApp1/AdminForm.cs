@@ -31,6 +31,7 @@ namespace StudentApp1
         public AdminForm()
         {
             InitializeComponent();
+            this.FormClosing += (sender, e) => Application.Exit();
             LoadUserData();
             rooms = LoadRoomsFromJson();
             if (rooms.Count == 0)
@@ -101,7 +102,7 @@ namespace StudentApp1
         private void LogOut()
         {
             LoginForm loginForm = new LoginForm();
-            this.Close();
+            this.Hide();
             loginForm.Show();
         }
 

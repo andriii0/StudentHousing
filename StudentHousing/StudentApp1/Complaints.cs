@@ -24,6 +24,8 @@ namespace StudentApp1
         public Complaints(User user, Room room)
         {
             InitializeComponent();
+            this.FormClosing += (sender, e) => Application.Exit();
+
             currentUser = user;
             userRoom = room;
 
@@ -71,7 +73,7 @@ namespace StudentApp1
         private void BackButton_Click(object sender, EventArgs e)
         {
             MainForm form1 = new MainForm(currentUser);
-            this.Close();
+            this.Hide();
             form1.Show();
         }
 

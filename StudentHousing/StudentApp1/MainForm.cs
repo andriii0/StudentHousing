@@ -9,7 +9,9 @@ namespace StudentApp1
         public MainForm(User authenticatedUser)
         {
             InitializeComponent();
-            this.AuthenticatedUser = authenticatedUser; 
+            this.FormClosing += (sender, e) => Application.Exit();
+
+            this.AuthenticatedUser = authenticatedUser;
 
             UpdateHelloText();
 
@@ -45,7 +47,7 @@ namespace StudentApp1
         private void label1_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
-            this.Close();
+            this.Hide();
             loginForm.Show();
         }
 
@@ -58,7 +60,7 @@ namespace StudentApp1
         private void Notes_Click(object sender, EventArgs e)
         {
             NoteDisplayForm noteDisplayForm = new NoteDisplayForm(AuthenticatedUser, AuthenticatedUser.UserRoom);
-            this.Close();
+            this.Hide();
             noteDisplayForm.Show();
         }
 
@@ -69,14 +71,14 @@ namespace StudentApp1
         private void Complaints_Click(object sender, EventArgs e)
         {
             Complaints complaints = new Complaints(CurrentUser.LoggedInUser, AuthenticatedUser.UserRoom);
-            this.Close();
+            this.Hide();
             complaints.Show();
         }
 
         private void ToDo_Click(object sender, EventArgs e)
         {
             ToDoForm toDoForm = new ToDoForm(AuthenticatedUser, AuthenticatedUser.UserRoom);
-            this.Close();
+            this.Hide();
             toDoForm.Show();
         }
 
@@ -84,7 +86,7 @@ namespace StudentApp1
         {
             ScheduleForm scheduleForm = new ScheduleForm(CurrentUser.LoggedInUser);
             scheduleForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         //Hover functionality

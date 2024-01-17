@@ -3,13 +3,13 @@
     "RoomNumber": 1,
     "Users": [
       {
-        "Age": 17,
-        "Email": "andrii@gmail.com",
         "Id": 1,
         "Name": "Andrii",
-        "Password": "123",
-        "Room": 1,
         "Username": "andrii0",
+        "Age": 17,
+        "Room": 1,
+        "Email": "andrii@gmail.com",
+        "Password": "123",
         "UserRoom": null
       }
     ],
@@ -47,21 +47,21 @@
         "description": "Take out the garbage",
         "dateTime": "2024-01-24T18:54:57.0684856+01:00",
         "TaskType": 0,
-        "IsCompleted": true
+        "IsCompleted": false
       },
       {
         "taskId": 6,
         "description": "Wash the dishes",
         "dateTime": "2024-01-24T18:54:57.068486+01:00",
         "TaskType": 0,
-        "IsCompleted": true
+        "IsCompleted": false
       },
       {
         "taskId": 7,
         "description": "Buy toilet paper",
         "dateTime": "2024-01-24T18:54:57.068488+01:00",
         "TaskType": 0,
-        "IsCompleted": true
+        "IsCompleted": false
       },
       {
         "taskId": 8,
@@ -88,49 +88,49 @@
         "taskId": 2,
         "description": "Clean the kitchen",
         "dateTime": "2024-01-24T21:13:01.7732935+01:00",
-        "TaskType": 1,
+        "TaskType": 0,
         "IsCompleted": false
       },
       {
         "taskId": 3,
         "description": "Sweep and mop the hallway",
         "dateTime": "2024-01-24T21:13:01.7733092+01:00",
-        "TaskType": 2,
+        "TaskType": 0,
         "IsCompleted": false
       },
       {
         "taskId": 4,
         "description": "Do laundry",
         "dateTime": "2024-01-24T21:13:01.7733102+01:00",
-        "TaskType": 3,
+        "TaskType": 0,
         "IsCompleted": false
       },
       {
         "taskId": 5,
         "description": "Take out the garbage",
         "dateTime": "2024-01-24T21:13:01.7733106+01:00",
-        "TaskType": 4,
+        "TaskType": 0,
         "IsCompleted": false
       },
       {
         "taskId": 6,
         "description": "Wash the dishes",
         "dateTime": "2024-01-24T21:13:01.7733111+01:00",
-        "TaskType": 5,
+        "TaskType": 0,
         "IsCompleted": false
       },
       {
         "taskId": 7,
         "description": "Buy toilet paper",
         "dateTime": "2024-01-24T21:13:01.7733115+01:00",
-        "TaskType": 6,
+        "TaskType": 0,
         "IsCompleted": false
       },
       {
         "taskId": 8,
         "description": "Buy household cleaning products",
         "dateTime": "2024-01-24T21:13:01.773312+01:00",
-        "TaskType": 7,
+        "TaskType": 0,
         "IsCompleted": false
       }
     ],

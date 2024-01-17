@@ -22,7 +22,7 @@ namespace StudentHousing
         {
             EventDescription = descriptionTextBox.Text;
             this.DialogResult = DialogResult.OK;
-            this.Close();
+            this.Hide();
         }
 
         private void LeftLabel_Click(object sender, EventArgs e)

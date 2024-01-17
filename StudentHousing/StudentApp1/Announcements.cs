@@ -25,7 +25,7 @@ namespace StudentApp1
             viewDeletedAnnouncementsButton.MouseLeave += viewDeletedAnnouncementsButton_MouseLeave;
         }
 
-        private void LoadAnnouncements()
+        public void LoadAnnouncements()
         {
             try
             {
@@ -42,7 +42,7 @@ namespace StudentApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There was a error!");
+                MessageBox.Show("There was a error!" + ex.Message);
             }
         }
 
@@ -62,6 +62,7 @@ namespace StudentApp1
 
             Label importantOrNotLabel = new Label();
             importantOrNotLabel.Text = announcement.ImportantOrNot;
+            importantOrNotLabel.Name = "importantOrNotLabel";
             importantOrNotLabel.Dock = DockStyle.Right;
             importantOrNotLabel.Width = 110;
             importantOrNotLabel.AutoSize = true;
@@ -143,8 +144,9 @@ namespace StudentApp1
             announcementsDeletedHistory.Show();
         }
 
-        private void Announcements_Load(object sender, EventArgs e)
+        public void Announcements_Load(object sender, EventArgs e)
         {
+            LoadAnnouncements();
         }
 
         //Hover functionality

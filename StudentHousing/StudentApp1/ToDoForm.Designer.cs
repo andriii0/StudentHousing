@@ -34,10 +34,9 @@
             // 
             // buttonClose
             // 
-            buttonClose.Location = new Point(13, 14);
-            buttonClose.Margin = new Padding(4, 5, 4, 5);
+            buttonClose.Location = new Point(9, 8);
             buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(144, 62);
+            buttonClose.Size = new Size(101, 37);
             buttonClose.TabIndex = 1;
             buttonClose.Text = "Back";
             buttonClose.UseVisualStyleBackColor = true;
@@ -47,23 +46,21 @@
             // 
             checkedListBoxTasks.Anchor = AnchorStyles.None;
             checkedListBoxTasks.FormattingEnabled = true;
-            checkedListBoxTasks.Location = new Point(353, 345);
-            checkedListBoxTasks.Margin = new Padding(4, 5, 4, 5);
+            checkedListBoxTasks.Location = new Point(61, 97);
             checkedListBoxTasks.Name = "checkedListBoxTasks";
-            checkedListBoxTasks.Size = new Size(684, 312);
+            checkedListBoxTasks.Size = new Size(542, 364);
             checkedListBoxTasks.TabIndex = 2;
             // 
             // ToDoForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = StudentHousing.Properties.Resources.c15;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1378, 994);
+            ClientSize = new Size(680, 537);
             Controls.Add(checkedListBoxTasks);
             Controls.Add(buttonClose);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "ToDoForm";
             SizeGripStyle = SizeGripStyle.Show;
             StartPosition = FormStartPosition.CenterScreen;

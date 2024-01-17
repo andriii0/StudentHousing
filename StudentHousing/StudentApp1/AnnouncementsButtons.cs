@@ -145,11 +145,9 @@ namespace StudentHousing
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There was a error!");
+                MessageBox.Show("There was a error!" + ex.Message);
             }
         }
-
-
 
         public void MarkImportantButton_Click(object sender, EventArgs e)
         {
@@ -183,10 +181,11 @@ namespace StudentHousing
                         }
                     }
                 }
+                
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There was a error!");
+                MessageBox.Show("There was a error!" + ex.Message);
             }
         }
 
@@ -225,7 +224,7 @@ namespace StudentHousing
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There was a error!");
+                MessageBox.Show("There was a error!" + ex.Message);
             }
         }
 

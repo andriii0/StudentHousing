@@ -45,10 +45,9 @@
             DateTimeLabel.AutoSize = true;
             DateTimeLabel.BackColor = Color.White;
             DateTimeLabel.Font = new Font("Comic Sans MS", 27.75F, FontStyle.Bold);
-            DateTimeLabel.Location = new Point(112, 55);
-            DateTimeLabel.Margin = new Padding(4, 0, 4, 0);
+            DateTimeLabel.Location = new Point(120, 33);
             DateTimeLabel.Name = "DateTimeLabel";
-            DateTimeLabel.Size = new Size(161, 78);
+            DateTimeLabel.Size = new Size(108, 51);
             DateTimeLabel.TabIndex = 0;
             DateTimeLabel.Text = "Date";
             DateTimeLabel.Click += DateTimeLabel_Click;
@@ -58,10 +57,9 @@
             LeftLabel.AutoSize = true;
             LeftLabel.BackColor = Color.White;
             LeftLabel.Font = new Font("Comic Sans MS", 27.75F, FontStyle.Bold);
-            LeftLabel.Location = new Point(27, 55);
-            LeftLabel.Margin = new Padding(4, 0, 4, 0);
+            LeftLabel.Location = new Point(19, 33);
             LeftLabel.Name = "LeftLabel";
-            LeftLabel.Size = new Size(67, 78);
+            LeftLabel.Size = new Size(45, 51);
             LeftLabel.TabIndex = 1;
             LeftLabel.Text = "<";
             LeftLabel.Click += LeftLabel_Click;
@@ -71,20 +69,18 @@
             RightLabel.AutoSize = true;
             RightLabel.BackColor = Color.White;
             RightLabel.Font = new Font("Comic Sans MS", 27.75F, FontStyle.Bold);
-            RightLabel.Location = new Point(609, 55);
-            RightLabel.Margin = new Padding(4, 0, 4, 0);
+            RightLabel.Location = new Point(426, 33);
             RightLabel.Name = "RightLabel";
-            RightLabel.Size = new Size(67, 78);
+            RightLabel.Size = new Size(45, 51);
             RightLabel.TabIndex = 2;
             RightLabel.Text = ">";
             RightLabel.Click += RightLabel_Click;
             // 
             // AddEvent
             // 
-            AddEvent.Location = new Point(39, 100);
-            AddEvent.Margin = new Padding(4, 5, 4, 5);
+            AddEvent.Location = new Point(27, 60);
             AddEvent.Name = "AddEvent";
-            AddEvent.Size = new Size(176, 77);
+            AddEvent.Size = new Size(123, 46);
             AddEvent.TabIndex = 4;
             AddEvent.Text = "Add an event";
             AddEvent.UseVisualStyleBackColor = true;
@@ -92,10 +88,9 @@
             // 
             // BackBtn
             // 
-            BackBtn.Location = new Point(39, 5);
-            BackBtn.Margin = new Padding(4, 5, 4, 5);
+            BackBtn.Location = new Point(27, 3);
             BackBtn.Name = "BackBtn";
-            BackBtn.Size = new Size(176, 72);
+            BackBtn.Size = new Size(123, 43);
             BackBtn.TabIndex = 5;
             BackBtn.Text = "Go Back";
             BackBtn.UseVisualStyleBackColor = true;
@@ -104,10 +99,9 @@
             // eventsPanel
             // 
             eventsPanel.Anchor = AnchorStyles.None;
-            eventsPanel.Location = new Point(311, 277);
-            eventsPanel.Margin = new Padding(4, 5, 4, 5);
+            eventsPanel.Location = new Point(218, 166);
             eventsPanel.Name = "eventsPanel";
-            eventsPanel.Size = new Size(801, 508);
+            eventsPanel.Size = new Size(561, 305);
             eventsPanel.TabIndex = 6;
             // 
             // panel1
@@ -117,9 +111,10 @@
             panel1.Controls.Add(LeftLabel);
             panel1.Controls.Add(DateTimeLabel);
             panel1.Controls.Add(RightLabel);
-            panel1.Location = new Point(322, 12);
+            panel1.Location = new Point(225, 7);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(732, 198);
+            panel1.Size = new Size(512, 119);
             panel1.TabIndex = 7;
             // 
             // panel2
@@ -127,23 +122,23 @@
             panel2.BackColor = Color.Transparent;
             panel2.Controls.Add(BackBtn);
             panel2.Controls.Add(AddEvent);
-            panel2.Location = new Point(23, 22);
+            panel2.Location = new Point(16, 13);
+            panel2.Margin = new Padding(2, 2, 2, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(255, 205);
+            panel2.Size = new Size(178, 123);
             panel2.TabIndex = 8;
             // 
             // ScheduleForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = Properties.Resources.abstract_bluish_paint_background_wallpaper;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1378, 994);
+            ClientSize = new Size(965, 596);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(eventsPanel);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "ScheduleForm";
             SizeGripStyle = SizeGripStyle.Show;
             StartPosition = FormStartPosition.CenterScreen;

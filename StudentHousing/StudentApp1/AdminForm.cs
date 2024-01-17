@@ -154,6 +154,11 @@ namespace StudentApp1
             string newUsername = textBox2.Text;
             string newEmail = textBox4.Text;
 
+            const int maxUsersPerRoom = 3;
+
+            int roomNumber = int.Parse(textBox6.Text);
+            Room selectedRoom = rooms.FirstOrDefault(room => room.RoomNumber == roomNumber);
+
             if (IsUsernameTaken(newUsername))
             {
                 MessageBox.Show("Username already exists. Please choose a different one.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -172,6 +177,12 @@ namespace StudentApp1
                 return;
             }
 
+            if (rooms[enteredRoomNumber - 1].GetUsersInRoom().Count >= maxUsersPerRoom)
+            {
+                MessageBox.Show($"Room {enteredRoomNumber} is already full. Maximum {maxUsersPerRoom} users allowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             User newUser = new User
             {
                 Id = userDatabase.Users.Count,
@@ -183,7 +194,6 @@ namespace StudentApp1
                 Room = int.Parse(textBox6.Text)
             };
 
-            int roomNumber = int.Parse(textBox6.Text);
             if (rooms[roomNumber - 1].GetUsersInRoom().Count == 0)
             {
                 rooms[roomNumber - 1].AssignTasksRandomly();

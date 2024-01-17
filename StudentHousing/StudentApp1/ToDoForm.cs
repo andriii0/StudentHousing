@@ -43,6 +43,7 @@ namespace StudentApp1
             {
                 string taskString = $"{task.GetTaskId()}. {task.GetDescription()} - {task.GetDateTime()}";
 
+
                 checkedListBoxTasks.Items.Add(taskString, task.IsCompleted);
             }
         }

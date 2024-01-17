@@ -46,9 +46,6 @@ namespace StudentApp1
         {
             return taskIdCounter++;
         }
-        public void UpdateTasks(List<Task> updatedTasks)
-        {
-            Tasks = updatedTasks;
-        }
+
     }
 }

@@ -8,6 +8,7 @@ using StudentApp1;
 
 namespace StudentHousing
 {
+    //можно использовать для ToDo Form
     public partial class ScheduleForm : Form
     {
         private DateTime selectedDate;

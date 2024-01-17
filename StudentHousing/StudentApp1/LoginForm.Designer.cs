@@ -40,67 +40,61 @@ namespace StudentApp1
             // 
             // usernameTextBox
             // 
-            usernameTextBox.Font = new Font("Segoe UI", 18F);
-            usernameTextBox.Location = new Point(110, 370);
-            usernameTextBox.Margin = new Padding(4, 5, 4, 5);
+            usernameTextBox.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            usernameTextBox.Location = new Point(77, 222);
             usernameTextBox.Name = "usernameTextBox";
             usernameTextBox.PlaceholderText = "Name or Email";
-            usernameTextBox.Size = new Size(371, 55);
+            usernameTextBox.Size = new Size(261, 39);
             usernameTextBox.TabIndex = 0;
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Font = new Font("Segoe UI", 18F);
-            passwordTextBox.Location = new Point(110, 572);
-            passwordTextBox.Margin = new Padding(4, 5, 4, 5);
+            passwordTextBox.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordTextBox.Location = new Point(77, 343);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.PasswordChar = '*';
             passwordTextBox.PlaceholderText = "Password";
-            passwordTextBox.Size = new Size(371, 55);
+            passwordTextBox.Size = new Size(261, 39);
             passwordTextBox.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.White;
-            label1.Font = new Font("Yu Gothic", 18F);
-            label1.Location = new Point(206, 112);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Font = new Font("Yu Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(144, 67);
             label1.Name = "label1";
-            label1.Size = new Size(193, 46);
+            label1.Size = new Size(128, 31);
             label1.TabIndex = 2;
             label1.Text = "Welcome! ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Yu Gothic", 18F);
-            label2.Location = new Point(110, 270);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Font = new Font("Yu Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(77, 162);
             label2.Name = "label2";
-            label2.Size = new Size(393, 46);
+            label2.Size = new Size(261, 31);
             label2.TabIndex = 3;
             label2.Text = "Please, type your login";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Yu Gothic", 18F);
-            label3.Location = new Point(130, 480);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Font = new Font("Yu Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(91, 288);
             label3.Name = "label3";
-            label3.Size = new Size(336, 46);
+            label3.Size = new Size(226, 31);
             label3.TabIndex = 4;
             label3.Text = "And your password";
             // 
             // LoginButton
             // 
             LoginButton.BackColor = Color.Snow;
-            LoginButton.Font = new Font("Segoe UI", 18F);
-            LoginButton.Location = new Point(110, 687);
-            LoginButton.Margin = new Padding(4, 5, 4, 5);
+            LoginButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            LoginButton.Location = new Point(77, 412);
             LoginButton.Name = "LoginButton";
-            LoginButton.Size = new Size(373, 83);
+            LoginButton.Size = new Size(261, 50);
             LoginButton.TabIndex = 5;
             LoginButton.Text = "Log in";
             LoginButton.UseVisualStyleBackColor = false;
@@ -108,12 +102,12 @@ namespace StudentApp1
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = StudentHousing.Properties.Resources.rm222_mind_20;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(614, 1013);
+            ClientSize = new Size(430, 608);
             Controls.Add(LoginButton);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -121,11 +115,9 @@ namespace StudentApp1
             Controls.Add(passwordTextBox);
             Controls.Add(usernameTextBox);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "LoginForm";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginForm";
             ResumeLayout(false);
             PerformLayout();

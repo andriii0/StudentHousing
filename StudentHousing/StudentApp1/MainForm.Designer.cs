@@ -41,27 +41,23 @@
             // 
             // HelloText
             // 
-            HelloText.Anchor = AnchorStyles.Top;
             HelloText.AutoSize = true;
             HelloText.BackColor = Color.Transparent;
             HelloText.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
             HelloText.ForeColor = Color.WhiteSmoke;
-            HelloText.Location = new Point(533, 108);
-            HelloText.Margin = new Padding(4, 0, 4, 0);
+            HelloText.Location = new Point(373, 65);
             HelloText.Name = "HelloText";
-            HelloText.Size = new Size(68, 44);
+            HelloText.Size = new Size(45, 29);
             HelloText.TabIndex = 0;
             HelloText.Text = "Hi!";
             // 
             // Schedule
             // 
-            Schedule.Anchor = AnchorStyles.Right;
             Schedule.BackColor = Color.Snow;
             Schedule.Font = new Font("Sylfaen", 14.25F, FontStyle.Bold);
-            Schedule.Location = new Point(743, 362);
-            Schedule.Margin = new Padding(4, 5, 4, 5);
+            Schedule.Location = new Point(520, 217);
             Schedule.Name = "Schedule";
-            Schedule.Size = new Size(264, 197);
+            Schedule.Size = new Size(185, 118);
             Schedule.TabIndex = 2;
             Schedule.Text = "Schedule\r\n";
             Schedule.UseVisualStyleBackColor = false;
@@ -69,13 +65,11 @@
             // 
             // ToDo
             // 
-            ToDo.Anchor = AnchorStyles.None;
             ToDo.BackColor = Color.Snow;
             ToDo.Font = new Font("Sylfaen", 14.25F, FontStyle.Bold);
-            ToDo.Location = new Point(437, 362);
-            ToDo.Margin = new Padding(4, 5, 4, 5);
+            ToDo.Location = new Point(306, 217);
             ToDo.Name = "ToDo";
-            ToDo.Size = new Size(264, 197);
+            ToDo.Size = new Size(185, 118);
             ToDo.TabIndex = 3;
             ToDo.Text = "To Do List";
             ToDo.UseVisualStyleBackColor = false;
@@ -83,13 +77,11 @@
             // 
             // Announcements
             // 
-            Announcements.Anchor = AnchorStyles.Left;
             Announcements.BackColor = Color.Snow;
             Announcements.Font = new Font("Sylfaen", 14.25F, FontStyle.Bold);
-            Announcements.Location = new Point(140, 362);
-            Announcements.Margin = new Padding(4, 5, 4, 5);
+            Announcements.Location = new Point(98, 217);
             Announcements.Name = "Announcements";
-            Announcements.Size = new Size(264, 197);
+            Announcements.Size = new Size(185, 118);
             Announcements.TabIndex = 5;
             Announcements.Text = "Announcements";
             Announcements.UseVisualStyleBackColor = false;
@@ -97,14 +89,12 @@
             // 
             // Rules
             // 
-            Rules.Anchor = AnchorStyles.Bottom;
             Rules.BackColor = Color.Snow;
             Rules.Font = new Font("Sylfaen", 14.25F, FontStyle.Bold);
-            Rules.Location = new Point(437, 620);
-            Rules.Margin = new Padding(4, 5, 4, 5);
+            Rules.Location = new Point(306, 372);
             Rules.Name = "Rules";
             Rules.RightToLeft = RightToLeft.Yes;
-            Rules.Size = new Size(264, 197);
+            Rules.Size = new Size(185, 118);
             Rules.TabIndex = 6;
             Rules.Text = "House Rules";
             Rules.UseVisualStyleBackColor = false;
@@ -112,28 +102,24 @@
             // 
             // LogOutLabel
             // 
-            LogOutLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             LogOutLabel.AutoSize = true;
             LogOutLabel.BackColor = Color.Transparent;
             LogOutLabel.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
             LogOutLabel.ForeColor = Color.GhostWhite;
-            LogOutLabel.Location = new Point(983, 108);
-            LogOutLabel.Margin = new Padding(4, 0, 4, 0);
+            LogOutLabel.Location = new Point(688, 65);
             LogOutLabel.Name = "LogOutLabel";
-            LogOutLabel.Size = new Size(148, 44);
+            LogOutLabel.Size = new Size(100, 29);
             LogOutLabel.TabIndex = 7;
             LogOutLabel.Text = "Log Out";
             LogOutLabel.Click += label1_Click;
             // 
             // Complaints
             // 
-            Complaints.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             Complaints.BackColor = Color.Snow;
             Complaints.Font = new Font("Sylfaen", 14.25F, FontStyle.Bold);
-            Complaints.Location = new Point(140, 620);
-            Complaints.Margin = new Padding(4, 5, 4, 5);
+            Complaints.Location = new Point(98, 372);
             Complaints.Name = "Complaints";
-            Complaints.Size = new Size(264, 197);
+            Complaints.Size = new Size(185, 118);
             Complaints.TabIndex = 8;
             Complaints.Text = "Leave a complaints";
             Complaints.UseVisualStyleBackColor = false;
@@ -141,14 +127,12 @@
             // 
             // Notes
             // 
-            Notes.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             Notes.BackColor = Color.Snow;
             Notes.Font = new Font("Sylfaen", 14.25F, FontStyle.Bold);
-            Notes.Location = new Point(743, 620);
-            Notes.Margin = new Padding(4, 5, 4, 5);
+            Notes.Location = new Point(520, 372);
             Notes.Name = "Notes";
             Notes.RightToLeft = RightToLeft.Yes;
-            Notes.Size = new Size(264, 197);
+            Notes.Size = new Size(185, 118);
             Notes.TabIndex = 9;
             Notes.Text = "Notes";
             Notes.UseVisualStyleBackColor = false;
@@ -156,13 +140,12 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.DarkGray;
             BackgroundImage = StudentHousing.Properties.Resources._8ecd7a74040c6137d8db25014de3cfaa;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1207, 1063);
+            ClientSize = new Size(845, 638);
             Controls.Add(Notes);
             Controls.Add(Complaints);
             Controls.Add(LogOutLabel);
@@ -171,11 +154,10 @@
             Controls.Add(ToDo);
             Controls.Add(Schedule);
             Controls.Add(HelloText);
-            Margin = new Padding(4, 5, 4, 5);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainForm";
-            SizeGripStyle = SizeGripStyle.Show;
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);

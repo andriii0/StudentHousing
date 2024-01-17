@@ -176,6 +176,21 @@ namespace StudentApp1
                 MessageBox.Show("There was no input");
             }
         }
+        private void SaveMessageToJsonFile(MessageFormat message, string filePath)
+        {
+            try
+            {
+                string existingJson = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
+                List<MessageFormat> messages = JsonConvert.DeserializeObject<List<MessageFormat>>(existingJson) ?? new List<MessageFormat>();
+                messages.Add(message);
+                string updatedJson = JsonConvert.SerializeObject(messages, Formatting.Indented);
+                File.WriteAllText(filePath, updatedJson);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving message to JSON file: {ex.Message}");
+            }
+        }
         private void SaveRoomsToJson()
         {
             string json = JsonConvert.SerializeObject(rooms);

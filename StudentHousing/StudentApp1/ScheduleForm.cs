@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using StudentApp1;
+using Label = System.Windows.Forms.Label;
 
 namespace StudentHousing
 {
@@ -23,6 +25,21 @@ namespace StudentHousing
         {
             InitializeComponent();
             eventPanels = new List<FlowLayoutPanel>();
+
+            BackBtn.MouseEnter += BackBtn_MouseEnter;
+            BackBtn.MouseLeave += BackBtn_MouseLeave;
+
+            AddEvent.MouseEnter += AddEvent_MouseEnter;
+            AddEvent.MouseLeave += AddEvent_MouseLeave;
+
+            RightLabel.MouseEnter += RightLabel_MouseEnter;
+            RightLabel.MouseLeave += RightLabel_MouseLeave;
+
+            DateTimeLabel.MouseEnter += DateTimeLabel_MouseEnter;
+            DateTimeLabel.MouseLeave += DateTimeLabel_MouseLeave;
+
+            LeftLabel.MouseEnter += LeftLabel_MouseEnter;
+            LeftLabel.MouseLeave += LeftLabel_MouseLeave;
         }
 
         private void LeftLabel_Click(object sender, EventArgs e)
@@ -205,6 +222,67 @@ namespace StudentHousing
             selectedDate = DateTime.Today;
             LoadEvents();
             UpdateDateLabel();
+        }
+
+        //Hover functionality
+        private void BackBtn_MouseEnter(object sender, EventArgs e)
+        {
+            BackBtn.BackColor = System.Drawing.Color.LightCoral;
+            BackBtn.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void BackBtn_MouseLeave(object sender, EventArgs e)
+        {
+            BackBtn.BackColor = System.Drawing.SystemColors.Control;
+            BackBtn.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void AddEvent_MouseEnter(object sender, EventArgs e)
+        {
+            AddEvent.BackColor = System.Drawing.Color.LightCoral;
+            AddEvent.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void AddEvent_MouseLeave(object sender, EventArgs e)
+        {
+            AddEvent.BackColor = System.Drawing.SystemColors.Control;
+            AddEvent.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void RightLabel_MouseEnter(object sender, EventArgs e)
+        {
+            RightLabel.BackColor = System.Drawing.Color.LightCoral;
+            RightLabel.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void RightLabel_MouseLeave(object sender, EventArgs e)
+        {
+            RightLabel.BackColor = System.Drawing.SystemColors.Control;
+            RightLabel.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void DateTimeLabel_MouseEnter(object sender, EventArgs e)
+        {
+            DateTimeLabel.BackColor = System.Drawing.Color.LightCoral;
+            DateTimeLabel.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void DateTimeLabel_MouseLeave(object sender, EventArgs e)
+        {
+            DateTimeLabel.BackColor = System.Drawing.SystemColors.Control;
+            DateTimeLabel.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void LeftLabel_MouseEnter(object sender, EventArgs e)
+        {
+            LeftLabel.BackColor = System.Drawing.Color.LightCoral;
+            LeftLabel.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void LeftLabel_MouseLeave(object sender, EventArgs e)
+        {
+            LeftLabel.BackColor = System.Drawing.SystemColors.Control;
+            LeftLabel.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

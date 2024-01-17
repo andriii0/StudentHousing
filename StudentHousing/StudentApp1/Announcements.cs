@@ -18,6 +18,11 @@ namespace StudentApp1
             InitializeComponent();
             announcementsButtons = new AnnouncementsButtons(flowLayOutPanelAnnouncements);
             LoadAnnouncements();
+
+            backLabel.MouseEnter += backLabel_MouseEnter;
+            backLabel.MouseLeave += backLabel_MouseLeave;
+            viewDeletedAnnouncementsButton.MouseEnter += viewDeletedAnnouncementsButton_MouseEnter;
+            viewDeletedAnnouncementsButton.MouseLeave += viewDeletedAnnouncementsButton_MouseLeave;
         }
 
         private void LoadAnnouncements()
@@ -124,7 +129,6 @@ namespace StudentApp1
         }
 
 
-
         private void backLabel_Click(object sender, EventArgs e)
         {
             MainForm form1 = new MainForm(CurrentUser.LoggedInUser);
@@ -141,6 +145,30 @@ namespace StudentApp1
 
         private void Announcements_Load(object sender, EventArgs e)
         {
+        }
+
+        //Hover functionality
+        private void backLabel_MouseEnter(object sender, EventArgs e)
+        {
+            backLabel.BackColor = System.Drawing.Color.LightCoral;
+            backLabel.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void backLabel_MouseLeave(object sender, EventArgs e)
+        {
+            backLabel.BackColor = System.Drawing.SystemColors.Control;
+            backLabel.ForeColor = System.Drawing.Color.Black;
+        }
+        private void viewDeletedAnnouncementsButton_MouseEnter(object sender, EventArgs e)
+        {
+            viewDeletedAnnouncementsButton.BackColor = System.Drawing.Color.LightCoral;
+            viewDeletedAnnouncementsButton.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void viewDeletedAnnouncementsButton_MouseLeave(object sender, EventArgs e)
+        {
+            viewDeletedAnnouncementsButton.BackColor = System.Drawing.SystemColors.Control;
+            viewDeletedAnnouncementsButton.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

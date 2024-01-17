@@ -12,6 +12,9 @@ namespace StudentHousing
             InitializeComponent();
             selectedDate = DateTime.Today;
             monthCalendar1.SelectionStart = selectedDate;
+
+            btnOK.MouseEnter += btnOK_MouseEnter;
+            btnOK.MouseLeave += btnOK_MouseLeave;
         }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
@@ -28,6 +31,18 @@ namespace StudentHousing
         public DateTime SelectedDate
         {
             get { return selectedDate; }
+        }
+
+        //Hover functionality
+        private void btnOK_MouseEnter(object sender, EventArgs e)
+        {
+            btnOK.BackColor = System.Drawing.Color.LightCoral;
+            btnOK.ForeColor = System.Drawing.Color.White;
+        }
+        private void btnOK_MouseLeave(object sender, EventArgs e)
+        {
+            btnOK.BackColor = System.Drawing.SystemColors.Control;
+            btnOK.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

@@ -28,6 +28,11 @@ namespace StudentApp1
             userRoom = room;
 
             complaints = new List<string>();
+
+            BackButton.MouseEnter += BackButton_MouseEnter;
+            BackButton.MouseLeave += BackButton_MouseLeave;
+            ComplaintBtn.MouseEnter += ComplaintBtn_MouseEnter;
+            ComplaintBtn.MouseLeave += ComplaintBtn_MouseLeave;
         }
 
         private void Complaints_Load(object sender, EventArgs e)
@@ -68,6 +73,29 @@ namespace StudentApp1
             MainForm form1 = new MainForm(currentUser);
             this.Close();
             form1.Show();
+        }
+
+        //Hover functonality
+        private void BackButton_MouseEnter(object sender, EventArgs e)
+        {
+            BackButton.BackColor = System.Drawing.Color.LightCoral;
+            BackButton.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void BackButton_MouseLeave(object sender, EventArgs e)
+        {
+            BackButton.BackColor = System.Drawing.SystemColors.Control;
+            BackButton.ForeColor = System.Drawing.Color.Black;
+        }
+        private void ComplaintBtn_MouseEnter(object sender, EventArgs e)
+        {
+            ComplaintBtn.BackColor = System.Drawing.Color.LightCoral;
+            ComplaintBtn.ForeColor = System.Drawing.Color.White;
+        }
+        private void ComplaintBtn_MouseLeave(object sender, EventArgs e)
+        {
+            ComplaintBtn.BackColor = System.Drawing.SystemColors.Control;
+            ComplaintBtn.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

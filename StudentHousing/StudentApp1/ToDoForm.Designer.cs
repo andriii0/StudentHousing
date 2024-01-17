@@ -34,32 +34,39 @@
             // 
             // buttonClose
             // 
-            buttonClose.Location = new Point(359, 298);
+            buttonClose.Location = new Point(13, 14);
+            buttonClose.Margin = new Padding(4, 5, 4, 5);
             buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(75, 23);
+            buttonClose.Size = new Size(144, 62);
             buttonClose.TabIndex = 1;
-            buttonClose.Text = "button1";
+            buttonClose.Text = "Back";
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
             // 
             // checkedListBoxTasks
             // 
+            checkedListBoxTasks.Anchor = AnchorStyles.None;
             checkedListBoxTasks.FormattingEnabled = true;
-            checkedListBoxTasks.Location = new Point(178, 132);
+            checkedListBoxTasks.Location = new Point(353, 345);
+            checkedListBoxTasks.Margin = new Padding(4, 5, 4, 5);
             checkedListBoxTasks.Name = "checkedListBoxTasks";
-            checkedListBoxTasks.Size = new Size(474, 130);
+            checkedListBoxTasks.Size = new Size(684, 312);
             checkedListBoxTasks.TabIndex = 2;
             // 
             // ToDoForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = StudentHousing.Properties.Resources.c15;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1378, 994);
             Controls.Add(checkedListBoxTasks);
             Controls.Add(buttonClose);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "ToDoForm";
+            SizeGripStyle = SizeGripStyle.Show;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ToDoForm";
             ResumeLayout(false);
         }

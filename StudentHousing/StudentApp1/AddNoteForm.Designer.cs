@@ -36,13 +36,13 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(11, 12);
-            BackButton.Margin = new Padding(2);
+            BackButton.Location = new Point(16, 20);
             BackButton.Name = "BackButton";
-            BackButton.Size = new Size(86, 30);
+            BackButton.Size = new Size(123, 50);
             BackButton.TabIndex = 1;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // label1
             // 
@@ -50,10 +50,9 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Yu Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(138, 38);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(218, 108);
             label1.Name = "label1";
-            label1.Size = new Size(133, 25);
+            label1.Size = new Size(202, 38);
             label1.TabIndex = 4;
             label1.Text = "Adding a note";
             // 
@@ -61,18 +60,18 @@
             // 
             textBoxNote.BackColor = Color.White;
             textBoxNote.BorderStyle = BorderStyle.None;
-            textBoxNote.Location = new Point(27, 137);
-            textBoxNote.Margin = new Padding(2);
+            textBoxNote.Location = new Point(54, 229);
             textBoxNote.Name = "textBoxNote";
-            textBoxNote.Size = new Size(373, 156);
+            textBoxNote.Size = new Size(533, 260);
             textBoxNote.TabIndex = 5;
             textBoxNote.Text = "";
             // 
             // btnAddNote
             // 
-            btnAddNote.Location = new Point(138, 319);
+            btnAddNote.Location = new Point(234, 544);
+            btnAddNote.Margin = new Padding(4, 5, 4, 5);
             btnAddNote.Name = "btnAddNote";
-            btnAddNote.Size = new Size(141, 58);
+            btnAddNote.Size = new Size(201, 97);
             btnAddNote.TabIndex = 6;
             btnAddNote.Text = "Add note";
             btnAddNote.UseVisualStyleBackColor = true;
@@ -80,18 +79,21 @@
             // 
             // AddNoteForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
             BackgroundImage = StudentHousing.Properties.Resources.v463_aum_69_abstractbackground;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(448, 513);
+            ClientSize = new Size(640, 855);
             Controls.Add(btnAddNote);
             Controls.Add(textBoxNote);
             Controls.Add(label1);
             Controls.Add(BackButton);
-            Margin = new Padding(2);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "AddNoteForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddNoteForm";
             ResumeLayout(false);
             PerformLayout();

@@ -36,8 +36,9 @@
             // 
             monthCalendar1.BackColor = Color.LightCoral;
             monthCalendar1.CalendarDimensions = new Size(2, 2);
-            monthCalendar1.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            monthCalendar1.Location = new Point(-1, 1);
+            monthCalendar1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            monthCalendar1.Location = new Point(5, 9);
+            monthCalendar1.Margin = new Padding(13, 15, 13, 15);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
             monthCalendar1.TitleBackColor = Color.MediumPurple;
@@ -46,9 +47,10 @@
             // 
             // btnOK
             // 
-            btnOK.Location = new Point(85, 322);
+            btnOK.Location = new Point(121, 537);
+            btnOK.Margin = new Padding(4, 5, 4, 5);
             btnOK.Name = "btnOK";
-            btnOK.Size = new Size(144, 48);
+            btnOK.Size = new Size(206, 80);
             btnOK.TabIndex = 1;
             btnOK.Text = "Choose date";
             btnOK.UseVisualStyleBackColor = true;
@@ -56,13 +58,17 @@
             // 
             // CalendarForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RosyBrown;
-            ClientSize = new Size(329, 391);
+            ClientSize = new Size(470, 652);
             Controls.Add(btnOK);
             Controls.Add(monthCalendar1);
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CalendarForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CalendarForm";
             ResumeLayout(false);
         }

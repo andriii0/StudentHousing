@@ -37,28 +37,31 @@
             // 
             backLabel.AutoSize = true;
             backLabel.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
-            backLabel.Location = new Point(10, 7);
+            backLabel.Location = new Point(101, 93);
+            backLabel.Margin = new Padding(4, 0, 4, 0);
             backLabel.Name = "backLabel";
-            backLabel.Size = new Size(65, 29);
+            backLabel.Size = new Size(97, 44);
             backLabel.TabIndex = 0;
             backLabel.Text = "Back";
             backLabel.Click += backLabel_Click;
             // 
             // flowLayOutPanelAnnouncements
             // 
+            flowLayOutPanelAnnouncements.Anchor = AnchorStyles.None;
             flowLayOutPanelAnnouncements.AutoScroll = true;
-            flowLayOutPanelAnnouncements.Location = new Point(10, 38);
-            flowLayOutPanelAnnouncements.Margin = new Padding(3, 2, 3, 2);
+            flowLayOutPanelAnnouncements.Location = new Point(214, 281);
+            flowLayOutPanelAnnouncements.Margin = new Padding(4, 3, 4, 3);
             flowLayOutPanelAnnouncements.Name = "flowLayOutPanelAnnouncements";
-            flowLayOutPanelAnnouncements.Size = new Size(679, 292);
+            flowLayOutPanelAnnouncements.Size = new Size(970, 487);
             flowLayOutPanelAnnouncements.TabIndex = 1;
             // 
             // viewDeletedAnnouncementsButton
             // 
-            viewDeletedAnnouncementsButton.Location = new Point(231, 7);
-            viewDeletedAnnouncementsButton.Margin = new Padding(3, 2, 3, 2);
+            viewDeletedAnnouncementsButton.Anchor = AnchorStyles.Top;
+            viewDeletedAnnouncementsButton.Location = new Point(555, 177);
+            viewDeletedAnnouncementsButton.Margin = new Padding(4, 3, 4, 3);
             viewDeletedAnnouncementsButton.Name = "viewDeletedAnnouncementsButton";
-            viewDeletedAnnouncementsButton.Size = new Size(206, 22);
+            viewDeletedAnnouncementsButton.Size = new Size(294, 37);
             viewDeletedAnnouncementsButton.TabIndex = 2;
             viewDeletedAnnouncementsButton.Text = "View deleted announcements";
             viewDeletedAnnouncementsButton.UseVisualStyleBackColor = true;
@@ -66,14 +69,18 @@
             // 
             // Announcements
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackgroundImage = StudentHousing.Properties.Resources.watercolor_texture_background_light_gray_wallpaper;
+            ClientSize = new Size(1378, 994);
             Controls.Add(viewDeletedAnnouncementsButton);
             Controls.Add(flowLayOutPanelAnnouncements);
             Controls.Add(backLabel);
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "Announcements";
+            SizeGripStyle = SizeGripStyle.Show;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Announcements";
             Load += Announcements_Load;
             ResumeLayout(false);

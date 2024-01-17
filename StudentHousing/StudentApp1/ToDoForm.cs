@@ -16,6 +16,9 @@ namespace StudentApp1
             currentUser = user;
             userRoom = room;
             LoadTasksForCurrentUserRoom();
+
+            buttonClose.MouseEnter += ButtonClose_MouseEnter;
+            buttonClose.MouseLeave += ButtonClose_MouseLeave;
         }
 
         private void LoadTasksForCurrentUserRoom()
@@ -91,6 +94,19 @@ namespace StudentApp1
             {
                 MessageBox.Show($"Error saving room to JSON file: {ex.Message}");
             }
+        }
+
+        //Hover functionality
+        private void ButtonClose_MouseEnter(object sender, EventArgs e)
+        {
+            buttonClose.BackColor = System.Drawing.Color.LightCoral;
+            buttonClose.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void ButtonClose_MouseLeave(object sender, EventArgs e)
+        {
+            buttonClose.BackColor = System.Drawing.SystemColors.Control;
+            buttonClose.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

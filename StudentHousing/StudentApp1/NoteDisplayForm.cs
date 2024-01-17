@@ -19,6 +19,12 @@ namespace StudentApp1
             currentUser = user;
             userRoom = room;
             LoadNotesForCurrentUserRoom();
+
+            BackButton.MouseEnter += BackButton_MouseEnter;
+            BackButton.MouseLeave += BackButton_MouseLeave;
+
+            AddNotes.MouseEnter += AddNotes_MouseEnter;
+            AddNotes.MouseLeave += AddNotes_MouseLeave;
         }
 
         private void LoadNotesForCurrentUserRoom()
@@ -175,6 +181,31 @@ namespace StudentApp1
             addNotesForm.ShowDialog();
 
             LoadNotesForCurrentUserRoom();
+        }
+
+        //Hover functionality
+        private void BackButton_MouseEnter(object sender, EventArgs e)
+        {
+            BackButton.BackColor = System.Drawing.Color.LightCoral;
+            BackButton.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void BackButton_MouseLeave(object sender, EventArgs e)
+        {
+            BackButton.BackColor = System.Drawing.SystemColors.Control;
+            BackButton.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void AddNotes_MouseEnter(object sender, EventArgs e)
+        {
+            AddNotes.BackColor = System.Drawing.Color.LightCoral;
+            AddNotes.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void AddNotes_MouseLeave(object sender, EventArgs e)
+        {
+            AddNotes.BackColor = System.Drawing.SystemColors.Control;
+            AddNotes.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

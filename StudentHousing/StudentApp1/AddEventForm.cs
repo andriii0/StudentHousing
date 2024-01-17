@@ -13,6 +13,9 @@ namespace StudentHousing
             InitializeComponent();
             SelectedDate = selectedDate;
             dateLabel.Text = selectedDate.ToString("dd.MM.yyyy");
+
+            addButton.MouseEnter += addButton_MouseEnter;
+            addButton.MouseLeave += addButton_MouseLeave;
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -54,6 +57,19 @@ namespace StudentHousing
                     UpdateDateLabel();
                 }
             }
+        }
+
+        //Hover functionality
+        private void addButton_MouseEnter(object sender, EventArgs e)
+        {
+            addButton.BackColor = System.Drawing.Color.LightCoral;
+            addButton.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void addButton_MouseLeave(object sender, EventArgs e)
+        {
+            addButton.BackColor = System.Drawing.SystemColors.Control;
+            addButton.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

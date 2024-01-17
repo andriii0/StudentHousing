@@ -36,29 +36,38 @@
             // 
             goBackToAnnouncementsLabel.AutoSize = true;
             goBackToAnnouncementsLabel.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold);
-            goBackToAnnouncementsLabel.Location = new Point(11, 9);
+            goBackToAnnouncementsLabel.Location = new Point(51, 49);
+            goBackToAnnouncementsLabel.Margin = new Padding(4, 0, 4, 0);
             goBackToAnnouncementsLabel.Name = "goBackToAnnouncementsLabel";
-            goBackToAnnouncementsLabel.Size = new Size(82, 38);
+            goBackToAnnouncementsLabel.Size = new Size(97, 44);
             goBackToAnnouncementsLabel.TabIndex = 0;
             goBackToAnnouncementsLabel.Text = "Back";
             goBackToAnnouncementsLabel.Click += goBackToAnnouncementsLabel_Click;
             // 
             // flowLayOutPanelHistory
             // 
+            flowLayOutPanelHistory.Anchor = AnchorStyles.None;
             flowLayOutPanelHistory.AutoScroll = true;
-            flowLayOutPanelHistory.Location = new Point(12, 50);
+            flowLayOutPanelHistory.Location = new Point(217, 276);
+            flowLayOutPanelHistory.Margin = new Padding(4);
             flowLayOutPanelHistory.Name = "flowLayOutPanelHistory";
-            flowLayOutPanelHistory.Size = new Size(776, 388);
+            flowLayOutPanelHistory.Size = new Size(970, 485);
             flowLayOutPanelHistory.TabIndex = 1;
             // 
             // AnnouncementsDeletedHistory
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackgroundImage = Properties.Resources.abstract_background_blue_wallpaper_image1;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1378, 994);
             Controls.Add(flowLayOutPanelHistory);
             Controls.Add(goBackToAnnouncementsLabel);
+            Margin = new Padding(4);
             Name = "AnnouncementsDeletedHistory";
+            SizeGripStyle = SizeGripStyle.Show;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AnnouncementsDeletedHistory";
             ResumeLayout(false);
             PerformLayout();

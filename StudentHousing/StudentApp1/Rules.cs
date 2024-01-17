@@ -18,6 +18,8 @@ namespace StudentApp1
         public Rules()
         {
             InitializeComponent();
+            AcceptButton.MouseEnter += AcceptButton_MouseEnter;
+            AcceptButton.MouseLeave += AcceptButton_MouseLeave;
         }
 
         private void AcceptButton_Click(object sender, EventArgs e)
@@ -40,6 +42,19 @@ namespace StudentApp1
             8. Personal Hygiene: Maintain personal hygiene to uphold cleanliness and health standards within the dormitory.
             9. Kitchen Usage Guidelines: Clean up after cooking and ensure kitchen supplies are accessible to everyone.
             10. Storage Rules: Store personal belongings in designated areas to keep common spaces tidy and safe for everyone.";
+        }
+
+        //Hover functionality
+        private void AcceptButton_MouseEnter(object sender, EventArgs e)
+        {
+            AcceptButton.BackColor = System.Drawing.Color.LightCoral;
+            AcceptButton.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void AcceptButton_MouseLeave(object sender, EventArgs e)
+        {
+            AcceptButton.BackColor = System.Drawing.SystemColors.Control;
+            AcceptButton.ForeColor = System.Drawing.Color.Black;
         }
     }
 

@@ -39,11 +39,13 @@
             // 
             // AcceptButton
             // 
+            AcceptButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             AcceptButton.BackColor = Color.White;
             AcceptButton.Font = new Font("Segoe UI", 14.25F);
-            AcceptButton.Location = new Point(635, 396);
+            AcceptButton.Location = new Point(1134, 891);
+            AcceptButton.Margin = new Padding(4, 5, 4, 5);
             AcceptButton.Name = "AcceptButton";
-            AcceptButton.Size = new Size(136, 42);
+            AcceptButton.Size = new Size(194, 70);
             AcceptButton.TabIndex = 9;
             AcceptButton.Text = "Accept";
             AcceptButton.UseVisualStyleBackColor = false;
@@ -51,39 +53,47 @@
             // 
             // richTextBox1
             // 
+            richTextBox1.Anchor = AnchorStyles.None;
             richTextBox1.BackColor = Color.White;
             richTextBox1.Font = new Font("Georgia", 14.25F);
-            richTextBox1.Location = new Point(65, 74);
+            richTextBox1.Location = new Point(216, 265);
+            richTextBox1.Margin = new Padding(4, 5, 4, 5);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(642, 294);
+            richTextBox1.Size = new Size(915, 487);
             richTextBox1.TabIndex = 10;
             richTextBox1.Text = "";
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Cambria", 14.25F);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(286, 30);
+            label1.Location = new Point(523, 66);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(223, 22);
+            label1.Size = new Size(339, 34);
             label1.TabIndex = 11;
             label1.Text = "Please, follow rules below!";
             // 
             // Rules
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ControlLightLight;
             BackgroundImage = StudentHousing.Properties.Resources._22;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1378, 994);
             Controls.Add(label1);
             Controls.Add(richTextBox1);
             Controls.Add(AcceptButton);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Rules";
+            SizeGripStyle = SizeGripStyle.Show;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Rules";
             Load += Rules_Load;
             ResumeLayout(false);

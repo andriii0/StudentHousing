@@ -16,6 +16,12 @@ namespace StudentApp1
             InitializeComponent();
             userRoom = room;
             this.creator = creator;
+
+            btnAddNote.MouseEnter += btnAddNote_MouseEnter;
+            btnAddNote.MouseLeave += btnAddNote_MouseLeave;
+
+            BackButton.MouseEnter += BackButton_MouseEnter;
+            BackButton.MouseLeave += BackButton_MouseLeave;
         }
 
 
@@ -66,5 +72,36 @@ namespace StudentApp1
             }
         }
 
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            MainForm form1 = new MainForm(CurrentUser.LoggedInUser);
+            this.Close();
+            form1.Show();
+        }
+
+        //Hover functionality
+
+        private void btnAddNote_MouseEnter(object sender, EventArgs e)
+        {
+            btnAddNote.BackColor = System.Drawing.Color.LightCoral;
+            btnAddNote.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void btnAddNote_MouseLeave(object sender, EventArgs e)
+        {
+            btnAddNote.BackColor = System.Drawing.SystemColors.Control;
+            btnAddNote.ForeColor = System.Drawing.Color.Black;
+        }
+        private void BackButton_MouseEnter(object sender, EventArgs e)
+        {
+            BackButton.BackColor = System.Drawing.Color.LightCoral;
+            BackButton.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void BackButton_MouseLeave(object sender, EventArgs e)
+        {
+            BackButton.BackColor = System.Drawing.SystemColors.Control;
+            BackButton.ForeColor = System.Drawing.Color.Black;
+        }
     }
 }

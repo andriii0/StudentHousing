@@ -38,6 +38,18 @@ namespace StudentApp1
                 InitializeRooms();
                 SaveRoomsToJson();
             }
+
+            RegisterButton.MouseEnter += RegisterButton_MouseEnter;
+            RegisterButton.MouseLeave += RegisterButton_MouseLeave;
+
+            sendAnnouncement_btn.MouseEnter += sendAnnouncement_btn_MouseEnter;
+            sendAnnouncement_btn.MouseLeave += sendAnnouncement_btn_MouseLeave;
+
+            btnAddTask.MouseEnter += btnAddTask_MouseEnter;
+            btnAddTask.MouseLeave += btnAddTask_MouseLeave;
+
+            btnUpdateTasks.MouseEnter += btnUpdateTasks_MouseEnter;
+            btnUpdateTasks.MouseLeave += btnUpdateTasks_MouseLeave;
         }
         private void InitializeRooms()
         {
@@ -427,6 +439,52 @@ namespace StudentApp1
             {
                 MessageBox.Show("Invalid room number. Please enter a valid room number.");
             }
+        }
+
+        //Hover functionality
+        private void RegisterButton_MouseEnter(object sender, EventArgs e)
+        {
+            RegisterButton.BackColor = System.Drawing.Color.LightCoral;
+            RegisterButton.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void RegisterButton_MouseLeave(object sender, EventArgs e)
+        {
+            RegisterButton.BackColor = System.Drawing.SystemColors.Control;
+            RegisterButton.ForeColor = System.Drawing.Color.Black;
+        }
+        private void sendAnnouncement_btn_MouseEnter(object sender, EventArgs e)
+        {
+            sendAnnouncement_btn.BackColor = System.Drawing.Color.LightCoral;
+            sendAnnouncement_btn.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void sendAnnouncement_btn_MouseLeave(object sender, EventArgs e)
+        {
+            sendAnnouncement_btn.BackColor = System.Drawing.SystemColors.Control;
+            sendAnnouncement_btn.ForeColor = System.Drawing.Color.Black;
+        }
+        private void btnAddTask_MouseEnter(object sender, EventArgs e)
+        {
+            btnAddTask.BackColor = System.Drawing.Color.LightCoral;
+            btnAddTask.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void btnAddTask_MouseLeave(object sender, EventArgs e)
+        {
+            btnAddTask.BackColor = System.Drawing.SystemColors.Control;
+            btnAddTask.ForeColor = System.Drawing.Color.Black;
+        }
+        private void btnUpdateTasks_MouseEnter(object sender, EventArgs e)
+        {
+            btnUpdateTasks.BackColor = System.Drawing.Color.LightCoral;
+            btnUpdateTasks.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void btnUpdateTasks_MouseLeave(object sender, EventArgs e)
+        {
+            btnUpdateTasks.BackColor = System.Drawing.SystemColors.Control;
+            btnUpdateTasks.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

@@ -16,6 +16,9 @@ namespace StudentApp1
         public LoginForm()
         {
             InitializeComponent();
+
+            LoginButton.MouseEnter += LoginButton_MouseEnter;
+            LoginButton.MouseLeave += LoginButton_MouseLeave;
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -119,6 +122,19 @@ namespace StudentApp1
             }
 
             return new List<Room>();
+        }
+
+        //Hover functionality
+        private void LoginButton_MouseEnter(object sender, EventArgs e)
+        {
+            LoginButton.BackColor = System.Drawing.Color.LightCoral;
+            LoginButton.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void LoginButton_MouseLeave(object sender, EventArgs e)
+        {
+            LoginButton.BackColor = System.Drawing.SystemColors.Control;
+            LoginButton.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

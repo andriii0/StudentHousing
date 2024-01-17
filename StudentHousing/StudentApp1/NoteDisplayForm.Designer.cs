@@ -35,10 +35,9 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(8, 24);
-            BackButton.Margin = new Padding(2);
+            BackButton.Location = new Point(11, 40);
             BackButton.Name = "BackButton";
-            BackButton.Size = new Size(112, 49);
+            BackButton.Size = new Size(160, 82);
             BackButton.TabIndex = 1;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = true;
@@ -46,10 +45,10 @@
             // 
             // AddNotes
             // 
-            AddNotes.Location = new Point(820, 25);
-            AddNotes.Margin = new Padding(2);
+            AddNotes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            AddNotes.Location = new Point(1171, 42);
             AddNotes.Name = "AddNotes";
-            AddNotes.Size = new Size(122, 49);
+            AddNotes.Size = new Size(174, 82);
             AddNotes.TabIndex = 2;
             AddNotes.Text = "Add a note";
             AddNotes.UseVisualStyleBackColor = true;
@@ -57,23 +56,27 @@
             // 
             // NotesPanel
             // 
-            NotesPanel.Location = new Point(132, 111);
+            NotesPanel.Anchor = AnchorStyles.None;
+            NotesPanel.Location = new Point(103, 230);
+            NotesPanel.Margin = new Padding(4, 5, 4, 5);
             NotesPanel.Name = "NotesPanel";
-            NotesPanel.Size = new Size(810, 364);
+            NotesPanel.Size = new Size(1157, 607);
             NotesPanel.TabIndex = 7;
             // 
             // NoteDisplayForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = StudentHousing.Properties.Resources._4853433;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1007, 514);
+            ClientSize = new Size(1378, 994);
             Controls.Add(NotesPanel);
             Controls.Add(AddNotes);
             Controls.Add(BackButton);
-            Margin = new Padding(2);
             Name = "NoteDisplayForm";
+            SizeGripStyle = SizeGripStyle.Show;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "NoteDisplayForm";
             ResumeLayout(false);
         }

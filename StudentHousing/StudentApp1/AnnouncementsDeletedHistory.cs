@@ -14,6 +14,9 @@ namespace StudentHousing
         {
             InitializeComponent();
             LoadDeletedHistory();
+
+            goBackToAnnouncementsLabel.MouseEnter += goBackToAnnouncementsLabel_MouseEnter;
+            goBackToAnnouncementsLabel.MouseLeave += goBackToAnnouncementsLabel_MouseLeave;
         }
 
         private void LoadDeletedHistory()
@@ -52,6 +55,19 @@ namespace StudentHousing
             this.Close();
             Announcements announcements = new Announcements();
             announcements.Show();
+        }
+
+        //Hover functionality
+        private void goBackToAnnouncementsLabel_MouseEnter(object sender, EventArgs e)
+        {
+            goBackToAnnouncementsLabel.BackColor = System.Drawing.Color.LightCoral;
+            goBackToAnnouncementsLabel.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void goBackToAnnouncementsLabel_MouseLeave(object sender, EventArgs e)
+        {
+            goBackToAnnouncementsLabel.BackColor = System.Drawing.SystemColors.Control;
+            goBackToAnnouncementsLabel.ForeColor = System.Drawing.Color.Black;
         }
     }
 }
